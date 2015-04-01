@@ -4,14 +4,14 @@ import twitter4j.conf.ConfigurationBuilder;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.Arrays;
 
 /**
  * Created by thomasmunoz on 31/03/15.
  */
 public class main {
     public static void main(String[] args) throws TwitterException, IOException, InterruptedException {
+
+        String queryTerm = "le";
 
         ConfigurationBuilder cb = new ConfigurationBuilder();
                 cb.setDebugEnabled(true)
@@ -23,31 +23,31 @@ public class main {
         TwitterFactory twitterFactory = new TwitterFactory(cb.build());
 
         Twitter twitter = twitterFactory.getInstance();
-        CSVWriter csvWriter = new CSVWriter(new FileWriter("PatronIncognito.csv"));
+        CSVWriter csvWriter = new CSVWriter(new FileWriter(queryTerm + ".csv"));
 
+
+        Query query = new Query("" + queryTerm);
+
+        // Number of tweets per page
+        query.setCount(100);
+
+        QueryResult result = twitter.search(query);
+
+        String currentTweet;
+        String [] toWrite;
+        String tweet;
         int tweetCount = 0;
 
-        for(int i = 0; i < 100; ++i){
-            Query query = new Query("#PatronIncognito");
-            query.setCount(100);
-
-            QueryResult result = twitter.search(query);
-
-            String currentTweet;
-            String [] toWrite;
-            String tweet;
-
+        do {
             for (Status status : result.getTweets()) {
 
                 currentTweet = status.getLang() + " @" + status.getUser().getScreenName() + " " + status.getText();
 
-                toWrite = currentTweet.split("\\s+");
-
-                Arrays.sort(toWrite);
+                toWrite = currentTweet.split(" ");
 
                 StringBuilder builder = new StringBuilder();
 
-                System.out.println("Number of tweets : " + tweetCount++);
+                System.out.println("Number of tweets : " + ++tweetCount);
 
                 for(String str : toWrite){
                     if(builder.length() > 0)
@@ -62,8 +62,14 @@ public class main {
                 csvWriter.writeNext(toWrite);
             }
 
-            Thread.sleep(1500);
-        }
+            // Next page of the query
+            query = result.nextQuery();
+            if(query != null){
+                result = twitter.search(query);
+            }
+            Thread.sleep(10000);
+
+        } while(query != null);
 
         csvWriter.close();
     }

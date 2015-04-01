@@ -2,15 +2,25 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import java.io.*;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by sknz on 4/1/15.
  */
 public class CSVToTrans {
+    public static <T, E> T getKeyByValue(Map<T, E> map, E value) {
+        for (Map.Entry<T, E> entry : map.entrySet()) {
+            if (value.equals(entry.getValue())) {
+                return entry.getKey();
+            }
+        }
+        return null;
+    }
+
     public static void main(String[] args) {
         final String inputFileName = args[0];
         final String outputFileName = args[1];
-        final String outputDictionnaryFileName = args[1] + ".dict";
+        final String outputDictionaryFileName = args[1] + ".dict";
         final HashMap<String, Integer> items = new HashMap<>();
         int latestId = 0;
 
@@ -18,7 +28,7 @@ public class CSVToTrans {
                      new BufferedWriter(
                              new OutputStreamWriter(
                                      new FileOutputStream(
-                                             outputDictionnaryFileName)));
+                                             outputDictionaryFileName)));
              BufferedWriter transWriter =
                      new BufferedWriter(
                              new OutputStreamWriter(
@@ -33,10 +43,12 @@ public class CSVToTrans {
                     if (items.containsKey(item)) {
                         id = items.get(item);
                     } else {
-                        id = ++latestId;
+                        latestId = latestId + 1;
+                        id = latestId;
                         items.put(item, id);
                     }
                     transWriter.write(String.format("%d ", id));
+                    System.out.println(item.equals(getKeyByValue(items, id)));
                 }
                 transWriter.newLine();
             }

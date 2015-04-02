@@ -34,19 +34,19 @@ public class TransToCSV {
                                              outputFile)))) {
 
             String nextLine;
-            Pattern p = Pattern.compile("(\\d+) (.+)");
+            Matcher p = Pattern.compile("(\\d+) (.+)").matcher("");
             while ((nextLine = dictReader.readLine()) != null) {
-                Matcher m = p.matcher(nextLine);
-                m.find();
-                items.put(Integer.parseInt(m.group(1)), m.group(2));
+                p.reset(nextLine);
+                p.find();
+                items.put(Integer.parseInt(p.group(1)), p.group(2));
             }
 
             ArrayList<String> newLine = new ArrayList<>();
-            Pattern p2 = Pattern.compile("(.*)\\((\\d+)\\)");
+            Matcher p2 = Pattern.compile("(.*)\\((\\d+)\\)").matcher("");
             while ((nextLine = transReader.readLine()) != null) {
-                Matcher m = p2.matcher(nextLine);
-                if (m.find()) {
-                    nextLine = m.group(1);
+                p2.reset(nextLine);
+                if (p2.find()) {
+                    nextLine = p.group(1);
                 } else {
                     System.out.println("NO MATCH FOR " + nextLine);
                 }

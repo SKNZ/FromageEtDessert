@@ -9,11 +9,11 @@ import java.io.IOException;
  */
 public class TwitStream {
     public static void main(String[] args) throws TwitterException, IOException {
-        TwitToCSV twitToCSV = new TwitToCSV("trends");
+        final TwitToCSV twitToCSV = new TwitToCSV("trends_19h");
 
         StatusListener listener = new StatusListener(){
             public void onStatus(Status status) {
-                twitToCSV.saveTweet(status);
+                twitToCSV.export(status);
             }
             public void onDeletionNotice(StatusDeletionNotice statusDeletionNotice) {}
             public void onTrackLimitationNotice(int numberOfLimitedStatuses) {}
@@ -23,9 +23,7 @@ public class TwitStream {
 
             @Override
             public void onStallWarning(StallWarning stallWarning) {}
-
-            public void onException(Exception ex) {
-                ex.printStackTrace();}
+            public void onException(Exception ex) {ex.printStackTrace();}
         };
 
         TwitterStreamFactory twitterFactory = new TwitterStreamFactory(ConfigurationFactory.getInstance().getConfig());
@@ -35,11 +33,13 @@ public class TwitStream {
         FilterQuery filterQuery = new FilterQuery();
 
         Twitter twitter = new TwitterFactory(ConfigurationFactory.getInstance().getConfig()).getInstance();
-        Trend[] dailyTrends = twitter.getPlaceTrends(1).getTrends();
+        // France trend topics
+        Trend[] dailyTrends = twitter.getPlaceTrends(23424819).getTrends();
 
         String [] keywords = new String[dailyTrends.length];
 
         int i = 0;
+
         for (Trend trend : dailyTrends) {
             keywords[i++] = trend.getName();
         }

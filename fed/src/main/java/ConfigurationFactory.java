@@ -6,7 +6,7 @@ import twitter4j.conf.ConfigurationBuilder;
  */
 public class ConfigurationFactory {
 
-    private static ConfigurationFactory instance;
+    private static ConfigurationFactory instance = null;
     private Configuration config;
 
     private ConfigurationFactory(){
@@ -17,7 +17,7 @@ public class ConfigurationFactory {
                 .setOAuthAccessToken("59915564-vn1q77VqbPe6RcXZ8oLzGXN6aTIP4gSiSJw5HEbpi")
                 .setOAuthAccessTokenSecret("3WJMu2FvkgzPmj8wewzVnagWwsmQr2Re3ChWYPMxIpfrO");
 
-        getInstance().config = cb.build();
+        config = cb.build();
     }
 
     public static ConfigurationFactory getInstance() {
@@ -29,7 +29,7 @@ public class ConfigurationFactory {
     }
 
     public Configuration getConfig(){
-        return getInstance().config;
+        return config;
     }
 }
 

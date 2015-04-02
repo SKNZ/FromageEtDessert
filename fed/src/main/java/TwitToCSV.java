@@ -19,26 +19,9 @@ public class TwitToCSV implements IExporter{
     }
 
     public String[] format(Status status){
-        String [] toWrite;
-        String tweet;
-
-        String currentTweet = status.getLang() + " @" + status.getUser().getScreenName() + " " + status.getText();
-
-        toWrite = currentTweet.split(" ");
-
-        StringBuilder builder = new StringBuilder();
-
         System.out.println("Number of tweets : " + ++tweetsCount);
 
-        for(String str : toWrite){
-            if(builder.length() > 0)
-                builder.append(";");
-
-            builder.append(str);
-        }
-
-        tweet = status.getCreatedAt() + ";" + builder.toString();
-        return tweet.split(";");
+        return FormatTweet.createTweet(status);
     }
 
     public void export(Status status){

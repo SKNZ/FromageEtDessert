@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * Created by m13003158 on 02/04/15.
  */
-public class TwitToCSV {
+public class TwitToCSV implements IExporter{
     private String filename;
     private CSVWriter csvWriter;
     private int tweetsCount;
@@ -18,7 +18,7 @@ public class TwitToCSV {
         this.tweetsCount = 0;
     }
 
-    public void saveTweet(Status status){
+    public String[] format(Status status){
         String [] toWrite;
         String tweet;
 
@@ -38,8 +38,10 @@ public class TwitToCSV {
         }
 
         tweet = status.getCreatedAt() + ";" + builder.toString();
-        toWrite = tweet.split(";");
+        return tweet.split(";");
+    }
 
-        csvWriter.writeNext(toWrite);
+    public void export(Status status){
+        csvWriter.writeNext(format(status));
     }
 }

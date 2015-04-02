@@ -28,22 +28,13 @@ public class TwitStream {
                 ex.printStackTrace();}
         };
 
-        ConfigurationBuilder cb = new ConfigurationBuilder();
-        cb.setDebugEnabled(true)
-                .setOAuthConsumerKey("OmxdH8dF8PagDSO5ePpZ8mZK6")
-                .setOAuthConsumerSecret("wOGjv3ePR20G7MLPUcRAqKvimWbAYdSS0umNT64PXoKDIZlwj1")
-                .setOAuthAccessToken("59915564-vn1q77VqbPe6RcXZ8oLzGXN6aTIP4gSiSJw5HEbpi")
-                .setOAuthAccessTokenSecret("3WJMu2FvkgzPmj8wewzVnagWwsmQr2Re3ChWYPMxIpfrO");
-
-        Configuration config = cb.build();
-
-        TwitterStreamFactory twitterFactory = new TwitterStreamFactory(config);
+        TwitterStreamFactory twitterFactory = new TwitterStreamFactory(ConfigurationFactory.getInstance().getConfig());
         TwitterStream twitterStream = twitterFactory.getInstance();
         twitterStream.addListener(listener);
 
         FilterQuery filterQuery = new FilterQuery();
 
-        Twitter twitter = new TwitterFactory(config).getInstance();
+        Twitter twitter = new TwitterFactory(ConfigurationFactory.getInstance().getConfig()).getInstance();
         Trend[] dailyTrends = twitter.getPlaceTrends(1).getTrends();
 
         String [] keywords = new String[dailyTrends.length];

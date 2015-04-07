@@ -9,7 +9,7 @@ import java.io.IOException;
  */
 public class TwitStream {
     public static void main(String[] args) throws TwitterException, IOException {
-        final TwitToCSV twitToCSV = new TwitToCSV("trends_19h");
+        final TwitToCSV twitToCSV = new TwitToCSV("trends_15h");
 
         StatusListener listener = new StatusListener(){
             public void onStatus(Status status) {
@@ -33,6 +33,7 @@ public class TwitStream {
         FilterQuery filterQuery = new FilterQuery();
 
         Twitter twitter = new TwitterFactory(ConfigurationFactory.getInstance().getConfig()).getInstance();
+
         // France trend topics
         Trend[] dailyTrends = twitter.getPlaceTrends(23424819).getTrends();
 

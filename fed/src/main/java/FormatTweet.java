@@ -1,6 +1,8 @@
 import twitter4j.Status;
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by m13003158 on 02/04/15.
@@ -8,10 +10,11 @@ import java.util.ArrayList;
 public class FormatTweet {
     private static String[] getUselessChar(){
         String[] uselessChar = {
-                "", ",", "\"", "?", "!", ":", "-", "," , "'",
-                "RT", ".", "..", "...", "le", "la", "les",
-                "un", "une", "de", "des", "à", "a", "et", "ou",
-                "par", "pour", "mes", "ses", "leur", "leurs", "son"
+                "\\,", "\"", "\\?", "\\!", "\\:", "\\-", "\\," , "\\'",
+                "RT", "\\.", "..", "...", "le", "la", "les",
+                "un", "une", "de", "des", "\\à", "\\a", "et", "ou",
+                "par", "pour", "mes", "ses", "leur", "leurs", "son",
+                "\\\n", "[a-z]"
         };
 
         return uselessChar;
@@ -57,4 +60,19 @@ public class FormatTweet {
 
         return tweet.split(";");
     }
+
+    private static String removeUrl(String str)
+    {
+        String urlPattern = "((https?|http):((//)|(\\\\))+[\\w\\d:#@%/;$()~_?\\+-=\\\\\\.&]*)";
+        Pattern p = Pattern.compile(urlPattern, Pattern.CASE_INSENSITIVE);
+        Matcher m = p.matcher(str);
+        int i = 0;
+
+        while (m.find()) {
+            str = str.replaceAll(m.group(i),"").trim();
+            i++;
+        }
+        return str;
+    }
+
 }

@@ -18,6 +18,10 @@ public class AssociationRule {
         return x + " -> " + z + " conf " + getConf();
     }
 
+    public String textSerialize() {
+        return x.textSerialize() + " | " + y.textSerialize();
+    }
+
     public double getConf() {
         return (double)z.getCount() / x.getCount();
     }

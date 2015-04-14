@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.regex.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
@@ -66,9 +67,9 @@ public class FrequentPattern {
     @Override
     public String toString() {
         return "{" +
-                + count +
-               ", " + items +
-               '}';
+                +count +
+                ", " + items +
+                '}';
     }
 
     public static void main(String[] args) {
@@ -76,9 +77,17 @@ public class FrequentPattern {
         a.items = Arrays.asList(1, 2, 3);
 
         FrequentPattern b = new FrequentPattern();
-        b.items = Arrays.asList(2,3);
+        b.items = Arrays.asList(2, 3);
 
         FrequentPattern c = FrequentPattern.substract(b, a);
         System.out.println(c);
+    }
+
+    public String textSerialize() {
+        return items
+                .stream()
+                .map(Object::toString)
+                .reduce((a, b) -> a + " " + b)
+                + " (" + this.count + ")";
     }
 }

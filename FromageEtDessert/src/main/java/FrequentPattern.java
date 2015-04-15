@@ -84,10 +84,14 @@ public class FrequentPattern {
     }
 
     public String textSerialize() {
-        return items
-                .stream()
-                .map(Object::toString)
-                .reduce((a, b) -> a + " " + b)
-                + " (" + this.count + ")";
+        String s = "";
+
+        for (Integer a : items) {
+            s += a + " ";
+        }
+
+        s += "(" + this.count + ")";
+
+        return s;
     }
 }

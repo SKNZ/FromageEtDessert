@@ -19,10 +19,14 @@ public class AssociationRule {
     }
 
     public String textSerialize() {
-        return x.textSerialize() + " | " + y.textSerialize();
+        return x.textSerialize() + " | " + z.textSerialize() + " | " + getConf() + " | " + getLift();
     }
 
     public double getConf() {
         return (double)z.getCount() / x.getCount();
+    }
+
+    public double getLift() {
+        return getConf() / z.getCount();
     }
 }

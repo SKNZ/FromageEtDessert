@@ -15,6 +15,7 @@ public class AssociationRules {
         final String inputFileName = args[0];
         final double minConf = Double.parseDouble(args[1]);
         final String outputFileName = args[2];
+        final double minLift = Double.parseDouble(args[3]);
         final List<FrequentPattern> frequentPatterns = new ArrayList<>();
         final List<AssociationRule> associationRules = new ArrayList<>();
 
@@ -41,8 +42,9 @@ public class AssociationRules {
                     frequentPatterns
                             .stream()
                             .filter(z -> z.contains(x))
-                            .map((z) -> new AssociationRule(x, z))
+                            .map(z -> new AssociationRule(x, z))
                             .filter(r -> r.getConf() >= minConf && r.getConf() <= 1)
+                            .filter(r -> r.getLift() >= minLift)
                             .collect(Collectors.toList()));
         });
 
@@ -53,6 +55,7 @@ public class AssociationRules {
                 try {
                     outputFile.write(associationRule.textSerialize());
                     outputFile.newLine();
+                    System.out.println(associationRule);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

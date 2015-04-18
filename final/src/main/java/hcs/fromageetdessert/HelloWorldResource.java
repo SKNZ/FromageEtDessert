@@ -24,6 +24,7 @@ public class HelloWorldResource {
     }
 
     @GET
+    @Path("/lel")
     @Timed
     public Saying sayHello(@QueryParam("name") Optional<String> name) {
         final String value = String.format(template, name.or(defaultName));

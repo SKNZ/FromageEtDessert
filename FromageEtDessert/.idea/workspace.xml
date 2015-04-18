@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="145b659e-ee0b-4e2e-b312-5ef717d92797" name="Default" comment="Add new csv file">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/AssociationRule.java" afterPath="$PROJECT_DIR$/src/main/java/AssociationRule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../final/src/main/java/hcs/fromageetdessert/HelloWorldResource.java" afterPath="$PROJECT_DIR$/../final/src/main/java/hcs/fromageetdessert/HelloWorldResource.java" />
     </list>
     <ignored path="FromageEtDessert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,8 +60,8 @@
       <file leaf-file-name="AssociationRule.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/AssociationRule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.62952244">
-              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.6512301">
+              <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -678,7 +679,7 @@
       <workItem from="1429348439753" duration="9031000" />
       <workItem from="1429368981258" duration="1296000" />
       <workItem from="1429373138470" duration="1492000" />
-      <workItem from="1429375048324" duration="200000" />
+      <workItem from="1429375048324" duration="902000" />
     </task>
     <task id="LOCAL-00001" summary="Add new csv file">
       <created>1429349371614</created>
@@ -690,7 +691,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61007000" />
+    <option name="totallyTimeSpent" value="61709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="994" height="1055" extended-state="0" />
@@ -1147,8 +1148,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/AssociationRule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62952244">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.6512301">
+          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
           <folding />
         </state>
       </provider>

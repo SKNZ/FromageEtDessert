@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbdadc1c-b68c-44c9-946a-ab0741c1b474" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/hcs/fromageetdessert/HelloWorldResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_9_4_1201_jdbc41.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/hcs/fromageetdessert/TemplateHealthCheck.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/FromageEtDessertApplication.java" afterPath="$PROJECT_DIR$/src/main/java/hcs/fromageetdessert/FromageEtDessertApplication.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/FromageEtDessertConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/hcs/fromageetdessert/FromageEtDessertConfiguration.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Saying.java" afterPath="$PROJECT_DIR$/src/main/java/hcs/fromageetdessert/Saying.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/AssociationRule.java" afterPath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/AssociationRule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/AssociationRules.java" afterPath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/AssociationRules.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/FrequentPattern.java" afterPath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/FrequentPattern.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/FromageEtDessert.iml" afterPath="$PROJECT_DIR$/../FromageEtDessert/FromageEtDessert.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FromageEtDessert.iml" afterPath="$PROJECT_DIR$/FromageEtDessert.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/../FromageEtDessert/target/MANIFEST.MF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/TransToCSV.java" afterPath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/TransToCSV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../FromageEtDessert/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/.idea/misc.xml" afterPath="$PROJECT_DIR$/../FromageEtDessert/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/trendsFinalRebuilt.csv" afterPath="$PROJECT_DIR$/../FromageEtDessert/trendsFinalRebuilt.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FromageEtDessert/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -59,7 +44,17 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.546875">
               <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#435#436#0" expanded="true" />
+                <element signature="e#466#467#0" expanded="true" />
+                <element signature="e#532#533#0" expanded="true" />
+                <element signature="e#572#573#0" expanded="true" />
+                <element signature="e#628#629#0" expanded="true" />
+                <element signature="e#662#663#0" expanded="true" />
+                <element signature="e#727#728#0" expanded="true" />
+                <element signature="e#766#767#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -688,7 +683,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.546875">
           <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

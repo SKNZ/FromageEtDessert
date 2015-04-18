@@ -32,6 +32,6 @@ public class AssociationRule {
 //        System.out.println(count);
 //        System.out.println(tot);
         System.out.println(count / tot + " " + y.getItems());
-        return getConf() / (count / tot);
+        return getConf() / (z.getCount() / tot);
     }
 }

@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fbdadc1c-b68c-44c9-946a-ab0741c1b474" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/AssociationRule.java" afterPath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/AssociationRule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hcs/fromageetdessert/HelloWorldResource.java" afterPath="$PROJECT_DIR$/src/main/java/hcs/fromageetdessert/HelloWorldResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FromageEtDessert/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FromageEtDessert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -590,12 +587,12 @@
       <created>1429348396773</created>
       <option name="number" value="Default" />
       <updated>1429348396773</updated>
-      <workItem from="1429348399952" duration="11619000" />
+      <workItem from="1429348399952" duration="11700000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11619000" />
+    <option name="totallyTimeSpent" value="11700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="962" y="23" width="956" height="1055" extended-state="0" />

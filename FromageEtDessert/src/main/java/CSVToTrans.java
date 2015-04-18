@@ -48,7 +48,6 @@ public class CSVToTrans {
                         items.put(item, id);
                     }
                     transWriter.write(String.format("%d ", id));
-                    System.out.println(item.equals(getKeyByValue(items, id)));
                 }
                 transWriter.newLine();
             }

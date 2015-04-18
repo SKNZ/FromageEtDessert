@@ -17,6 +17,7 @@ public class AssociationRules {
         final double minConf = Double.parseDouble(args[1]);
         final String outputFileName = args[2];
         final double minLift = Double.parseDouble(args[3]);
+        final double minFreq = Double.parseDouble(args[4]);
         final List<AssociationRule> associationRules = new ArrayList<>();
 
         try {
@@ -37,12 +38,13 @@ public class AssociationRules {
             e.printStackTrace();
         }
 
+        String out = "";
         BufferedWriter outputFile = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputFileName)));
 
         int total = FREQUENT_PATTERNS.get(0).getCount();
         System.out.println("TOTAL " + total);
         for (int i = 1; i < FREQUENT_PATTERNS.size(); ++i) {
-            System.out.println(i + " / " + FREQUENT_PATTERNS.size());
+            if (i % 1000 == 0) System.out.println(i + " / " + FREQUENT_PATTERNS.size());
             FrequentPattern x = FREQUENT_PATTERNS.get(i);
             List<Integer> xItems = x.getItems();
             double xFq = (double)x.getCount() / total;
@@ -51,6 +53,9 @@ public class AssociationRules {
                 FrequentPattern z = FREQUENT_PATTERNS.get(j);
                 List<Integer> zItems = z.getItems();
                 double zFq = (double)z.getCount() / total;
+
+                if (zFq < minFreq)
+                    continue;
 
                 if (zItems.size() <= xItems.size() || !zItems.containsAll(xItems))
                     continue;
@@ -90,12 +95,13 @@ public class AssociationRules {
 
                     s += "| " + conf + " | " + lift;
 //                    System.out.println(s);
-                    outputFile.write(s);
-                    outputFile.newLine();
+                    out += s + '\n';
+                    System.out.println("LEL");
                 }
             }
         }
 
+        outputFile.write(out);
         outputFile.close();
     }
 }

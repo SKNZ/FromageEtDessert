@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="145b659e-ee0b-4e2e-b312-5ef717d92797" name="Default" comment="Add new csv file">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="145b659e-ee0b-4e2e-b312-5ef717d92797" name="Default" comment="Add new csv file" />
     <ignored path="FromageEtDessert.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -86,8 +84,8 @@
       <file leaf-file-name="trendsFinal.trans" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trendsFinal.trans">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26193923">
-              <caret line="951" column="75" selection-start-line="951" selection-start-column="75" selection-end-line="951" selection-end-column="75" />
+            <state vertical-scroll-proportion="20.535456">
+              <caret line="946" column="25" selection-start-line="946" selection-start-column="25" selection-end-line="946" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -644,7 +642,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="AssociationRules" />
       <option name="VM_PARAMETERS" value="-XX:-UseGCOverheadLimit" />
-      <option name="PROGRAM_PARAMETERS" value="tweets.out 1 tweets.assoc.out 15" />
+      <option name="PROGRAM_PARAMETERS" value="tweets.out 1 tweets.assoc.out 40" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -708,7 +706,7 @@
       <workItem from="1429368981258" duration="1296000" />
       <workItem from="1429373138470" duration="1492000" />
       <workItem from="1429375048324" duration="200000" />
-      <workItem from="1429375264015" duration="2263000" />
+      <workItem from="1429375264015" duration="2657000" />
     </task>
     <task id="LOCAL-00001" summary="Add new csv file">
       <created>1429349371614</created>
@@ -720,7 +718,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63270000" />
+    <option name="totallyTimeSpent" value="63664000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="23" width="1885" height="1057" extended-state="6" />
@@ -1240,8 +1238,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trendsFinal.trans">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26193923">
-          <caret line="951" column="75" selection-start-line="951" selection-start-column="75" selection-end-line="951" selection-end-column="75" />
+        <state vertical-scroll-proportion="20.535456">
+          <caret line="946" column="25" selection-start-line="946" selection-start-column="25" selection-end-line="946" selection-end-column="25" />
           <folding />
         </state>
       </provider>

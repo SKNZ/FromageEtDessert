@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class AssociationRules {
     public static final List<FrequentPattern> FREQUENT_PATTERNS = new ArrayList<>();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         final String inputFileName = args[0];
         final double minConf = Double.parseDouble(args[1]);
         final String outputFileName = args[2];
@@ -37,32 +37,65 @@ public class AssociationRules {
             e.printStackTrace();
         }
 
-        FREQUENT_PATTERNS.forEach(x -> {
-            associationRules.addAll(
-                    FREQUENT_PATTERNS
-                            .stream()
-                            .filter(z -> z.contains(x))
-                            .map(z -> new AssociationRule(x, z))
-                            .filter(r -> r.getConf() >= minConf && r.getConf() <= 1)
-                            .filter(r -> r.getLift() >= minLift)
-                            .collect(Collectors.toList()));
-        });
+        BufferedWriter outputFile = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputFileName)));
 
-        try {
-            BufferedWriter outputFile = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputFileName)));
+        int total = FREQUENT_PATTERNS.get(0).getCount();
+        System.out.println("TOTAL " + total);
+        for (int i = 1; i < FREQUENT_PATTERNS.size(); ++i) {
+            System.out.println(i + " / " + FREQUENT_PATTERNS.size());
+            FrequentPattern x = FREQUENT_PATTERNS.get(i);
+            List<Integer> xItems = x.getItems();
+            double xFq = (double)x.getCount() / total;
 
-            associationRules.forEach(associationRule -> {
-                try {
-                    outputFile.write(associationRule.textSerialize());
-                    outputFile.newLine();
-                } catch (IOException e) {
-                    e.printStackTrace();
+            for (int j = 1; j < FREQUENT_PATTERNS.size(); ++j) {
+                FrequentPattern z = FREQUENT_PATTERNS.get(j);
+                List<Integer> zItems = z.getItems();
+                double zFq = (double)z.getCount() / total;
+
+                if (zItems.size() <= xItems.size() || !zItems.containsAll(xItems))
+                    continue;
+
+                double conf = zFq / xFq;
+                if (conf < minConf)
+                    continue;
+
+                List<Integer> yItems = new ArrayList<>();
+                double yFq = 0.0d;
+
+                for (Integer item : zItems)
+                    yItems.add(item);
+
+                for (Integer item : xItems)
+                    yItems.remove(item);
+
+                for (int k = 0; k < FREQUENT_PATTERNS.size(); ++k) {
+                    FrequentPattern y = FREQUENT_PATTERNS.get(k);
+                    if (y.getItems().equals(yItems)) {
+                        yFq = (double)y.getCount() / total;
+                        break;
+                    }
                 }
-            });
 
-            outputFile.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+                double lift = conf / yFq;
+//                System.out.println(zFq + " " + xFq + " " + yFq + " " + conf + " " + lift);
+                if (lift >= minLift) {
+                    String s = "";
+                    for (int item : xItems)
+                        s += item + " ";
+
+                    s+= "-> ";
+
+                    for (int item : yItems)
+                        s += item + " ";
+
+                    s += "| " + conf + " | " + lift;
+//                    System.out.println(s);
+                    outputFile.write(s);
+                    outputFile.newLine();
+                }
+            }
         }
+
+        outputFile.close();
     }
 }

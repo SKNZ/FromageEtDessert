@@ -58,7 +58,7 @@ public class FrequentPattern {
     }
 
     public boolean contains(FrequentPattern fp) {
-        return items.containsAll(fp.items) && items.size() > fp.items.size();
+        return items.size() > fp.items.size() && items.containsAll(fp.items);
     }
 
     @Override

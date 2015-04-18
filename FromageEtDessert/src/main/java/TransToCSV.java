@@ -36,6 +36,7 @@ public class TransToCSV {
             String nextLine;
             Matcher p = Pattern.compile("(\\d+) (.+)").matcher("");
             while ((nextLine = dictReader.readLine()) != null) {
+                System.out.println(nextLine);
                 p.reset(nextLine);
                 p.find();
                 items.put(Integer.parseInt(p.group(1)), p.group(2));

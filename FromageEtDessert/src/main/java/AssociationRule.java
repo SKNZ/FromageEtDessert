@@ -9,7 +9,7 @@ public class AssociationRule {
     public AssociationRule(FrequentPattern x, FrequentPattern z) {
         this.x = x;
         this.z = z;
-        assert(x.contains(z));
+        assert (x.contains(z));
         y = FrequentPattern.substract(x, z);
     }
 
@@ -23,10 +23,10 @@ public class AssociationRule {
     }
 
     public double getConf() {
-        return (double)z.getCount() / x.getCount();
+        return (double) z.getCount() / x.getCount();
     }
 
     public double getLift() {
-        return getConf() / z.getCount();
+        return getConf() / ((double) AssociationRules.FREQUENT_PATTERNS.stream().filter(fp -> fp.getItems().equals(y.getItems())).findFirst().get().getCount() / AssociationRules.FREQUENT_PATTERNS.get(0).getCount());
     }
 }

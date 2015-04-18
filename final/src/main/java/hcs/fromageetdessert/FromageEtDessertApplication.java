@@ -1,3 +1,5 @@
+package hcs.fromageetdessert;
+
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -22,6 +24,13 @@ public class FromageEtDessertApplication extends Application<FromageEtDessertCon
 
     @Override
     public void run(FromageEtDessertConfiguration fromageEtDessertConfiguration, Environment environment) throws Exception {
+        final HelloWorldResource resource = new HelloWorldResource(
+                fromageEtDessertConfiguration.getTemplate(),
+                fromageEtDessertConfiguration.getDefaultName()
+        );
 
+        environment.healthChecks().register("template", new TemplateHealthCheck(fromageEtDessertConfiguration.getTemplate()));
+
+        environment.jersey().register(resource);
     }
 }

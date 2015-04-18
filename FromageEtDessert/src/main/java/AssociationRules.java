@@ -10,19 +10,19 @@ import java.util.stream.Collectors;
  * Created by sknz on 4/2/15.
  */
 public class AssociationRules {
+    public static final List<FrequentPattern> FREQUENT_PATTERNS = new ArrayList<>();
 
     public static void main(String[] args) {
         final String inputFileName = args[0];
         final double minConf = Double.parseDouble(args[1]);
         final String outputFileName = args[2];
         final double minLift = Double.parseDouble(args[3]);
-        final List<FrequentPattern> frequentPatterns = new ArrayList<>();
         final List<AssociationRule> associationRules = new ArrayList<>();
 
         try {
-            frequentPatterns.addAll(
+            FREQUENT_PATTERNS.addAll(
                     Files.readAllLines(Paths.get(inputFileName))
-                            .parallelStream()
+                            .stream()
                             .map((s) -> {
                                 try {
                                     return FrequentPattern.fromString(s);
@@ -37,9 +37,9 @@ public class AssociationRules {
             e.printStackTrace();
         }
 
-        frequentPatterns.forEach(x -> {
+        FREQUENT_PATTERNS.forEach(x -> {
             associationRules.addAll(
-                    frequentPatterns
+                    FREQUENT_PATTERNS
                             .stream()
                             .filter(z -> z.contains(x))
                             .map(z -> new AssociationRule(x, z))
@@ -55,7 +55,7 @@ public class AssociationRules {
                 try {
                     outputFile.write(associationRule.textSerialize());
                     outputFile.newLine();
-                    System.out.println(associationRule);
+                    System.out.println(associationRule.textSerialize());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

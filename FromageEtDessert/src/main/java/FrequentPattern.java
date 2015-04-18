@@ -33,6 +33,9 @@ public class FrequentPattern {
             throw new FedEx("Bad file format");
         }
 
+        String freq = regex.group(2).trim();
+        pattern.count = Integer.parseInt(freq);
+
         if (regex.group(1) != null && !regex.group(1).isEmpty()) {
             pattern.items.addAll(
                     Arrays.asList(regex.group(1).split("\\s+"))
@@ -41,12 +44,6 @@ public class FrequentPattern {
                             .map(Integer::parseInt)
                             .collect(Collectors.toList()));
         }
-
-        String freq = regex.group(2).trim();
-        pattern.count = Integer.parseInt(freq);
-
-        if (pattern.items.isEmpty())
-            return null;
 
         return pattern;
     }

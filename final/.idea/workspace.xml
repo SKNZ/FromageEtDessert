@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbdadc1c-b68c-44c9-946a-ab0741c1b474" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/TransToCSV.java" afterPath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/TransToCSV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/trendsFinalRebuilt.csv" afterPath="$PROJECT_DIR$/../FromageEtDessert/trendsFinalRebuilt.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FromageEtDessert/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="fbdadc1c-b68c-44c9-946a-ab0741c1b474" name="Default" comment="" />
     <ignored path="FromageEtDessert.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -579,12 +574,12 @@
       <created>1429348396773</created>
       <option name="number" value="Default" />
       <updated>1429348396773</updated>
-      <workItem from="1429348399952" duration="8722000" />
+      <workItem from="1429348399952" duration="8901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8722000" />
+    <option name="totallyTimeSpent" value="8901000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="962" y="23" width="956" height="1055" extended-state="0" />

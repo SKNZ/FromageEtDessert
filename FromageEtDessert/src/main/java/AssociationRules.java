@@ -55,7 +55,6 @@ public class AssociationRules {
                 try {
                     outputFile.write(associationRule.textSerialize());
                     outputFile.newLine();
-                    System.out.println(associationRule.textSerialize());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

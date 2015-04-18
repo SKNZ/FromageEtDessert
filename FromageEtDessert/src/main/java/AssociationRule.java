@@ -31,7 +31,6 @@ public class AssociationRule {
         double tot = AssociationRules.FREQUENT_PATTERNS.get(0).getCount();
 //        System.out.println(count);
 //        System.out.println(tot);
-        System.out.println(count / tot + " " + y.getItems());
         return getConf() / (z.getCount() / tot);
     }
 }

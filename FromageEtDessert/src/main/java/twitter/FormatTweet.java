@@ -9,13 +9,20 @@ import java.util.regex.Pattern;
  * Created by m13003158 on 02/04/15.
  */
 public class FormatTweet {
+    private static String[] getUselessString(){
+        String[] uselessString = {
+                "le", "la", "les", "un", "une", "de", "des", "\\à", "\\a", "et", "ou", "que", "je", "il", "elle",
+                "and", "your", "you", "her", "his", "them", "they", "or", "but", "where", "au", "avec",
+                "what", "when", "why", "because", "for", "do", "did", "done", "if", "it", "she", "he", "the",
+                "pas", "par", "pour", "mes", "ses", "leur", "leurs", "son", "a"
+        };
+
+        return uselessString;
+    }
+
     private static String[] getUselessChar(){
         String[] uselessChar = {
-                "\\,", "\"", "\\?", "\\!", "\\:", "\\-", "\\," , "\\'",
-                "RT", "\\.", "..", "...", "le", "la", "les",
-                "un", "une", "de", "des", "\\à", "\\a", "et", "ou",
-                "par", "pour", "mes", "ses", "leur", "leurs", "son",
-                "\\\n", "[a-z]"
+                "?", "!", "-", ",", "'", "\"", "\\\n"
         };
 
         return uselessChar;
@@ -33,10 +40,14 @@ public class FormatTweet {
         }
 
         // Clean the tweet for useless character
-        for(String s : FormatTweet.getUselessChar()){
+        for(String s : FormatTweet.getUselessString()){
             // Delete the useless character and all useless spaces
                 currentTweet = currentTweet.replaceAll("\\b" + s + "\\b", " ")
                                             .replaceAll("\\s+", " ");
+        }
+
+        for(String s : FormatTweet.getUselessChar()){
+            currentTweet = currentTweet.replace(s, "");
         }
 
         // "Wed Apr 01 03:30:08 CEST 2015"
@@ -47,13 +58,16 @@ public class FormatTweet {
 
         String[] toWrite = currentTweet.split(" ");
 
+
         StringBuilder builder = new StringBuilder();
 
         for(String str : toWrite){
-            if(builder.length() > 0)
-                builder.append(";");
+            if(!str.isEmpty()){
+                if(builder.length() > 0)
+                    builder.append(";");
 
-            builder.append(str);
+                builder.append(str);
+            }
         }
 
         String tweet = status.getCreatedAt() + ";" + location + ";" + "@" + status.getUser().getScreenName() + ";" +
@@ -61,19 +75,4 @@ public class FormatTweet {
 
         return tweet.split(";");
     }
-
-    private static String removeUrl(String str)
-    {
-        String urlPattern = "((https?|http):((//)|(\\\\))+[\\w\\d:#@%/;$()~_?\\+-=\\\\\\.&]*)";
-        Pattern p = Pattern.compile(urlPattern, Pattern.CASE_INSENSITIVE);
-        Matcher m = p.matcher(str);
-        int i = 0;
-
-        while (m.find()) {
-            str = str.replaceAll(m.group(i),"").trim();
-            i++;
-        }
-        return str;
-    }
-
 }

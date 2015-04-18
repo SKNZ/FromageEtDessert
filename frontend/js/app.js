@@ -1,6 +1,27 @@
 /**
  * Created by thomasmunoz on 18/04/15.
  */
+var result = [
+    {
+        conf: 1,
+        lift: 20,
+        x: ["#SW"],
+        y: ["Harrison", "Ford", "Chewie"]
+    },
+    {
+        conf: 0.8,
+        lift: 22,
+        x: ["#SW"],
+        y: ["BB8", "R2D2", "C3PO"]
+    },
+    {
+        conf: 1,
+        lift: 21,
+        x: ["BB"],
+        y: ["Bryan", "Cranston", "Walter", "White"]
+    }
+]
+
 $(document).ready(function(){
     var file;
 
@@ -29,7 +50,8 @@ $(document).ready(function(){
         } else if (value == 'twitter'){
             console.log('Twitter Feed');
         } else if(value == 'csv'){
-            upload(file);
+            //upload(file);
+            display();
         }
     });
 });
@@ -59,6 +81,7 @@ function upload(file){
                 if(data.success !== undefined){
                     if(data.success) {
                         console.log('success');
+
                     } else {
                         console.log('erreur');
                     }
@@ -66,4 +89,27 @@ function upload(file){
             }
         }
     });
+}
+
+function display(){
+    $('.jumbotron').empty();
+    $('.jumbotron').append(
+        $('<h1 />')
+            .text("Rendu"),
+        $('<select />')
+            .attr('name', 'outtype')
+            .attr('id', 'outtype')
+            .append(
+            $('<option />')
+                .prop('disabled', true)
+                .prop('selected', true)
+                .text('Selectionner le type d\'export'),
+            $('<option />')
+                .attr('name', 'table')
+                .text('Tableau'),
+            $('<option />')
+                .attr('name', 'tagcloud')
+                .text('Nuage de mot')
+        )
+    )
 }

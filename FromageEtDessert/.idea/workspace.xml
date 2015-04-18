@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="145b659e-ee0b-4e2e-b312-5ef717d92797" name="Default" comment="Add new csv file">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/trendsFinal.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/trendsFinal.out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/trendsFinal.trans" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/trendsFinal.trans.dict" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apriori/apriori/AprioriSets.o" afterPath="$PROJECT_DIR$/../apriori/apriori/AprioriSets.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apriori/apriori/Data.o" afterPath="$PROJECT_DIR$/../apriori/apriori/Data.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apriori/apriori/Item.o" afterPath="$PROJECT_DIR$/../apriori/apriori/Item.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apriori/apriori/aprioritest.o" afterPath="$PROJECT_DIR$/../apriori/apriori/aprioritest.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/twitter/FormatTweet.java" afterPath="$PROJECT_DIR$/src/main/java/twitter/FormatTweet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apriori/apriori/Makefile" afterPath="$PROJECT_DIR$/../apriori/apriori/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FromageEtDessert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,11 +30,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CSVToTrans.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CSVToTrans.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CSVToTrans.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32656023">
+            <state vertical-scroll-proportion="0.0">
               <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trendsFinal.trans.dict" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trendsFinal.trans.dict">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trendsFinalRebuilt.csv" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/trendsFinalRebuilt.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-174.23077">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -262,7 +276,7 @@
       <recent name="$PROJECT_DIR$/src/twitter" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CSVToTrans">
+  <component name="RunManager" selected="Application.TransToCSV">
     <configuration default="false" name="CSVToTrans" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="CSVToTrans" />
@@ -636,7 +650,7 @@
       <workItem from="1429124795956" duration="409000" />
       <workItem from="1429125270037" duration="5687000" />
       <workItem from="1429347259999" duration="912000" />
-      <workItem from="1429348439753" duration="8332000" />
+      <workItem from="1429348439753" duration="9031000" />
     </task>
     <task id="LOCAL-00001" summary="Add new csv file">
       <created>1429349371614</created>
@@ -648,11 +662,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57320000" />
+    <option name="totallyTimeSpent" value="58019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="23" width="1885" height="1057" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -671,7 +685,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1458886" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2742915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2742915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1036,14 +1050,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TransToCSV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/trendsFinal.csv">
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -1080,8 +1086,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CSVToTrans.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32656023">
+        <state vertical-scroll-proportion="0.0">
           <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trendsFinal.trans.dict">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TransToCSV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trendsFinalRebuilt.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-174.23077">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

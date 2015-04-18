@@ -9,7 +9,7 @@ import java.io.IOException;
  */
 public class TwitStream {
     public static void main(String[] args) throws TwitterException, IOException {
-        final TwitToCSV twitToCSV = new TwitToCSV("trendslol");
+       /* final TwitToCSV twitToCSV = new TwitToCSV("trendslol");
 
         StatusListener listener = new StatusListener(){
             public void onStatus(Status status) {
@@ -46,7 +46,55 @@ public class TwitStream {
         }
 
         filterQuery.track(keywords);
-        twitterStream.filter(filterQuery);
+        twitterStream.filter(filterQuery);*/
+        capture();
 
+    }
+
+    public static void capture() throws IOException {
+        final TwitToCSV twitToCSV = new TwitToCSV("trendslol");
+        TwitterStreamFactory twitterFactory = new TwitterStreamFactory(ConfigurationFactory.getInstance().getConfig());
+        Twitter twitter = new TwitterFactory(ConfigurationFactory.getInstance().getConfig()).getInstance();
+
+
+        int wantedTweets = 1000;
+        long lastSearchID = Long.MAX_VALUE;
+        long firstQueryID;
+        int remainingTweets = wantedTweets;
+        Query query = new Query("#UMP");
+
+        try
+        {
+
+            int count = 0;
+            while(remainingTweets > 0)
+            {
+                remainingTweets = wantedTweets - count;
+
+                if(remainingTweets > 100)
+                {
+                    query.count(100);
+                }
+                else
+                {
+                    query.count(remainingTweets);
+                }
+                QueryResult result = twitter.search(query);
+
+                int i = 0;
+                for(Status status : result.getTweets()){
+                if(i == 99){
+                   firstQueryID = status.getId();
+                    query.setMaxId(firstQueryID);
+                }
+                    twitToCSV.export(status);
+                ++i;
+
+                remainingTweets = wantedTweets - count;
+            }
+            }
+        } catch (TwitterException e) {
+            e.printStackTrace();
+        }
     }
 }

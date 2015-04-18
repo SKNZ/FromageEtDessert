@@ -1,0 +1,43 @@
+.jumbotron
+{
+    display: table;
+    width: 100%;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-auto: auto;
+}
+
+.container
+{
+    width: 90%;
+}
+
+h1
+{
+    font-size: 3.5em !important;
+    margin-bottom: 20px;
+}
+
+.container b
+{
+    font-size: 2em;
+}
+.col-md-6
+{
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.col-md-6 input
+{
+    max-width: 300px;
+}
+#sendbutton
+{
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    font-size: 5em
+}

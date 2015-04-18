@@ -2,6 +2,7 @@
  * Created by thomasmunoz on 18/04/15.
  */
 $(document).ready(function(){
+    var file;
 
     $('#entry').on('change', function(){
         if($(this).val() == 'csv'){
@@ -11,6 +12,11 @@ $(document).ready(function(){
                     .attr('id', 'csvfile')
             )
         }
+    });
+
+    $('.jumbotron').on('change', '#csvfile', function(e){
+        file = e.target.files[0];
+        console.log(file);
     });
 
     $('#sendbutton').on('click', function(){
@@ -23,23 +29,16 @@ $(document).ready(function(){
         } else if (value == 'twitter'){
             console.log('Twitter Feed');
         } else if(value == 'csv'){
-
-            var fileReader = new FileReader();
-            fileReader.onload = function (e){
-                app.generateEncryptForm(file.name, e.target.result);
-            };
-            
-            fileReader.readAsDataURL(file);
+            upload(file);
         }
     });
 });
 
 function upload(file){
     var formData = new FormData();
-    formData.append('filename', filename);
     formData.append('file', file);
     $.ajax({
-        url: '/upload',
+        url: '/upload.php',
         type: 'POST',
         processData: false,
         contentType: false,
@@ -50,8 +49,7 @@ function upload(file){
                 if (e.lengthComputable) {
                     var percentCompleted = e.loaded / e.total;
                     percentCompleted = (percentCompleted * 100).toFixed(2);
-                    app.changeProgressBar($('#content .progress-bar'),
-                        percentCompleted);
+                    console.log(percentCompleted);
                 }
             }, false);
             return xhr;
@@ -60,9 +58,9 @@ function upload(file){
             if(data !== undefined){
                 if(data.success !== undefined){
                     if(data.success) {
-                        app.onFileUploadSuccess(data.message, key);
+                        console.log('success');
                     } else {
-                        app.displayError(data.message);
+                        console.log('erreur');
                     }
                 }
             }

@@ -9,7 +9,7 @@ import java.io.IOException;
  */
 public class TwitStream {
     public static void main(String[] args) throws TwitterException, IOException {
-        final TwitToCSV twitToCSV = new TwitToCSV("trendsFinal");
+        final TwitToCSV twitToCSV = new TwitToCSV("trendslol");
 
         StatusListener listener = new StatusListener(){
             public void onStatus(Status status) {

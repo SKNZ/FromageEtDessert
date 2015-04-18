@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="145b659e-ee0b-4e2e-b312-5ef717d92797" name="Default" comment="Add new csv file">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/AssociationRule.java" afterPath="$PROJECT_DIR$/src/main/java/AssociationRule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../final/src/main/java/hcs/fromageetdessert/HelloWorldResource.java" afterPath="$PROJECT_DIR$/../final/src/main/java/hcs/fromageetdessert/HelloWorldResource.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tweets_Fri-Apr-03-16_23_24-CEST-2015.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tweets_Fri-Apr-03-16_23_24-CEST-2015.trans" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../final/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../final/.idea/workspace.xml" />
     </list>
     <ignored path="FromageEtDessert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,7 +94,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,7 +106,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#732#733#0" expanded="false" />
+                <element signature="e#783#784#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -691,7 +699,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61709000" />
+    <option name="totallyTimeSpent" value="62114000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="994" height="1055" extended-state="0" />
@@ -766,7 +774,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#732#733#0" expanded="false" />
+            <element signature="e#783#784#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -782,7 +794,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -822,7 +836,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -869,7 +885,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -908,7 +926,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -947,7 +967,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1094,7 +1116,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#732#733#0" expanded="false" />
+            <element signature="e#783#784#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1110,7 +1136,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

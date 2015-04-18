@@ -12,7 +12,7 @@ public class FromageEtDessertApplication extends Application<FromageEtDessertCon
 
     @Override
     public String getName() {
-        return "hello-world";
+        return "fromageetdessert";
     }
 
     @Override

@@ -2,45 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbdadc1c-b68c-44c9-946a-ab0741c1b474" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FromageEtDessert/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/.idea/libraries/Maven__net_sf_opencsv_opencsv_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/GoTWAR.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/ITAvENG.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/PatronIncognito.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/hcscorp.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/le.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/stream_test.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/target/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/test_fed.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fed/trends.csv" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../fed/.idea/libraries/Maven__org_twitter4j_twitter4j_core_4_0_3.xml" afterPath="$PROJECT_DIR$/../FromageEtDessert/.idea/libraries/Maven__org_twitter4j_twitter4j_core_4_0_3.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../fed/.idea/libraries/Maven__org_twitter4j_twitter4j_stream_4_0_3.xml" afterPath="$PROJECT_DIR$/../FromageEtDessert/.idea/libraries/Maven__org_twitter4j_twitter4j_stream_4_0_3.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../fed/src/main/java/ConfigurationFactory.java" afterPath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/twitter/ConfigurationFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../fed/src/main/java/FormatTweet.java" afterPath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/twitter/FormatTweet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../fed/src/main/java/IExporter.java" afterPath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/twitter/IExporter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../fed/src/main/java/TwitStream.java" afterPath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/twitter/TwitStream.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../fed/src/main/java/TwitToCSV.java" afterPath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/twitter/TwitToCSV.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../fed/src/main/java/main.java" afterPath="$PROJECT_DIR$/../FromageEtDessert/src/main/java/twitter/main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../fed/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/../FromageEtDessert/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/FromageEtDessert.iml" afterPath="$PROJECT_DIR$/../FromageEtDessert/FromageEtDessert.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/../FromageEtDessert/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../FromageEtDessert/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/pom.xml" afterPath="$PROJECT_DIR$/../FromageEtDessert/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FromageEtDessert/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FromageEtDessert/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Saying.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FromageEtDessertApplication.java" afterPath="$PROJECT_DIR$/src/main/java/FromageEtDessertApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FromageEtDessert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,15 +58,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FromageEtDessertApplication.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FromageEtDessertApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/FromageEtDessertApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28125">
-              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#410#411#0" expanded="true" />
-                <element signature="e#446#447#0" expanded="true" />
+                <element signature="e#451#452#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Saying.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Saying.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.140625">
+              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#451#452#0" expanded="true" />
+                <element signature="e#476#477#0" expanded="true" />
+                <element signature="e#528#529#0" expanded="true" />
+                <element signature="e#558#559#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,6 +123,7 @@
         <option value="$PROJECT_DIR$/src/main/java/AppConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/FromageEtDessertConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/FromageEtDessertApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Saying.java" />
       </list>
     </option>
   </component>
@@ -538,15 +519,15 @@
       <created>1429348396773</created>
       <option name="number" value="Default" />
       <updated>1429348396773</updated>
-      <workItem from="1429348399952" duration="971000" />
+      <workItem from="1429348399952" duration="1209000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="971000" />
+    <option name="totallyTimeSpent" value="1209000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="957" y="23" width="961" height="1055" extended-state="0" />
+    <frame x="957" y="23" width="961" height="1055" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -621,12 +602,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FromageEtDessertApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28125">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Saying.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.140625">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
           </folding>
         </state>
       </provider>

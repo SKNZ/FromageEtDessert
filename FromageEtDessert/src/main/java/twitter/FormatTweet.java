@@ -58,13 +58,16 @@ public class FormatTweet {
 
         String[] toWrite = currentTweet.split(" ");
 
+
         StringBuilder builder = new StringBuilder();
 
         for(String str : toWrite){
-            if(builder.length() > 0)
-                builder.append(";");
+            if(!str.isEmpty()){
+                if(builder.length() > 0)
+                    builder.append(";");
 
-            builder.append(str);
+                builder.append(str);
+            }
         }
 
         String tweet = status.getCreatedAt() + ";" + location + ";" + "@" + status.getUser().getScreenName() + ";" +

@@ -10,7 +10,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import java.util.concurrent.atomic.AtomicLong;
 
-@Path("/hello-world")
+@Path("/scenario")
 @Produces(MediaType.APPLICATION_JSON)
 public class HelloWorldResource {
     private final String template;

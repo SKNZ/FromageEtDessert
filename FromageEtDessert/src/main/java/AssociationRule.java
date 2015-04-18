@@ -27,6 +27,11 @@ public class AssociationRule {
     }
 
     public double getLift() {
-        return getConf() / ((double) AssociationRules.FREQUENT_PATTERNS.stream().filter(fp -> fp.getItems().equals(y.getItems())).findFirst().get().getCount() / AssociationRules.FREQUENT_PATTERNS.get(0).getCount());
+        double count = AssociationRules.FREQUENT_PATTERNS.stream().filter(fp -> fp.getItems().equals(y.getItems())).findFirst().get().getCount();
+        double tot = AssociationRules.FREQUENT_PATTERNS.get(0).getCount();
+//        System.out.println(count);
+//        System.out.println(tot);
+        System.out.println(count / tot + " " + y.getItems());
+        return getConf() / (count / tot);
     }
 }

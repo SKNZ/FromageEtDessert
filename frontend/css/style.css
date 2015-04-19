@@ -41,3 +41,8 @@ h1
     height: 150px;
     font-size: 5em
 }
+
+.jumbotron table
+{
+    margin-top: 20px;
+}

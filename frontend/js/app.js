@@ -94,6 +94,7 @@ $(document).ready(function(){
         } else if (value == 'twitter'){
             getTwitter();
         } else if(value == 'csv'){
+            upload(file);
             display();
         }
     });
@@ -111,8 +112,9 @@ $(document).ready(function(){
 function upload(file){
     var formData = new FormData();
     formData.append('file', file);
+    formData.append('id', 4);
     $.ajax({
-        url: '/upload.php',
+        url: '/backend/scenario/upload',
         type: 'POST',
         processData: false,
         contentType: false,
@@ -129,6 +131,7 @@ function upload(file){
             return xhr;
         },
         success: function(data){
+            console.log(data);
             if(data !== undefined){
                 if(data.success !== undefined){
                     if(data.success) {

@@ -11,7 +11,8 @@ public class FormatTweet {
                 "le", "la", "les", "un", "une", "de", "des", "\\à", "\\a", "et", "ou", "que", "je", "il", "elle",
                 "and", "your", "you", "her", "his", "them", "they", "or", "but", "where", "au", "avec",
                 "what", "when", "why", "because", "for", "do", "did", "done", "if", "it", "she", "he", "the",
-                "pas", "par", "pour", "mes", "ses", "leur", "leurs", "son", "a", "rt", "sur"
+                "pas", "par", "pour", "mes", "ses", "leur", "leurs", "son", "a", "rt", "sur", "mais", "ça", "votre",
+                "vous", "en"
         };
 
         return uselessString;

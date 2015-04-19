@@ -8,55 +8,10 @@ import twitter4j.Status;
 public class FormatTweet {
     private static String[] getUselessString() {
         String[] uselessString = {
-                "le",
-                "la",
-                "les",
-                "un",
-                "une",
-                "de",
-                "des",
-                "\\à",
-                "\\a",
-                "et",
-                "ou",
-                "que",
-                "je",
-                "il",
-                "elle",
-                "and",
-                "your",
-                "you",
-                "her",
-                "his",
-                "them",
-                "they",
-                "or",
-                "but",
-                "where",
-                "au",
-                "avec",
-                "what",
-                "when",
-                "why",
-                "because",
-                "for",
-                "do",
-                "did",
-                "done",
-                "if",
-                "it",
-                "she",
-                "he",
-                "the",
-                "pas",
-                "par",
-                "pour",
-                "mes",
-                "ses",
-                "leur",
-                "leurs",
-                "son",
-                "a"
+                "le", "la", "les", "un", "une", "de", "des", "\\à", "\\a", "et", "ou", "que", "je", "il", "elle",
+                "and", "your", "you", "her", "his", "them", "they", "or", "but", "where", "au", "avec",
+                "what", "when", "why", "because", "for", "do", "did", "done", "if", "it", "she", "he", "the",
+                "pas", "par", "pour", "mes", "ses", "leur", "leurs", "son", "a", "rt", "sur"
         };
 
         return uselessString;
@@ -115,20 +70,11 @@ public class FormatTweet {
             }
         }
 
-        String
-                tweet =
-                status.getCreatedAt() +
-                ";" +
-                location +
-                ";" +
-                "@" +
-                status.getUser().getScreenName() +
-                ";" +
-                builder.toString() +
-                ";" +
-                day +
-                ";" +
-                hour;
+        String tweet =
+                "@"
+                + status.getUser().getScreenName()
+                + ";"
+                + builder.toString();
 
         return tweet.split(";");
     }

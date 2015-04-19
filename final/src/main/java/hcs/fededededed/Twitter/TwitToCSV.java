@@ -18,12 +18,12 @@ public class TwitToCSV implements IExporter{
         this.tweetsCount = 0;
     }
 
-    public String[] format(Status status){
+    public String[] format(Status status, String hashtag){
 //        System.out.println("Number of tweets : " + ++tweetsCount);
-        return FormatTweet.createTweet(status);
+        return FormatTweet.createTweet(status, hashtag);
     }
 
-    public void export(Status status){
-        csvWriter.writeNext(format(status));
+    public void export(Status status, String hashtag){
+        csvWriter.writeNext(format(status, hashtag));
     }
 }

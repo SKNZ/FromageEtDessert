@@ -28,7 +28,7 @@ public class TwitStream {
 
             QueryResult result = twitter.search(query);
             for (Status status : result.getTweets()) {
-                twitToCSV.export(status);
+                twitToCSV.export(status, hashtag);
                 remainingTweets--;
                 lastId = status.getId();
             }

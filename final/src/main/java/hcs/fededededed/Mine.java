@@ -79,8 +79,7 @@ public class Mine {
                 case "apriori-nedseb-c":
                     System.out.println("Apriori...");
                     Integer fq = (int)
-                            (Double.parseDouble(
-                                    args[argsPos++]) * wantedTweets);
+                            (Double.parseDouble(args[argsPos++]) * wantedTweets);
 
                     ProcessBuilder aprioriBuilder =
                             new ProcessBuilder(basePath + "/apriori",

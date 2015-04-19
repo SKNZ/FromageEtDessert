@@ -63,7 +63,9 @@ public class FormatTweet {
                 "ça",
                 "votre",
                 "vous",
-                "en"
+                "en",
+                "du",
+                "on"
         };
 
         return uselessString;
@@ -71,7 +73,7 @@ public class FormatTweet {
 
     private static String[] getUselessChar() {
         String[] uselessChar = {
-                "?", "!", "-", ",", "'", "\"", "\\\n"
+                "?", "!", "-", ",", "'", "\"", "\\\n", ":"
         };
 
         return uselessChar;

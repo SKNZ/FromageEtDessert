@@ -131,7 +131,9 @@ SQL
 
         $entry = $scenario['entry'];
         $process = $scenario['process'];
-        exec('java -jar mine.java ' . $id . ' ' . $entry . ' ' . $process . ' > /dev/null &');
+        exec('./lel.sh "' . $id . ' ' . $entry . ' ' . $process . '" > lel.txt 2>lel.err &');
+        ok();
+
     } catch (PDOException $e) {
         error(['Unknown database error']);
     }

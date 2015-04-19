@@ -105,6 +105,14 @@ public class Mine {
                     double minConf = Double.parseDouble(args[argsPos++]);
                     double minLift = Double.parseDouble(args[argsPos++]);
 
+
+                    try (Statement stmt = DB.conn.createStatement()) {
+                        stmt.execute("UPDATE scenario " +
+                                     "SET state = 'Rules...' " +
+                                     "WHERE id = " + id);
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                     System.out.println("Associations rules...");
                     AprioriToDatabase.convert(id, basePathId + "/apriori.out",
                                               basePathId + "/input.trans.dict",
@@ -115,6 +123,14 @@ public class Mine {
                     throw new RuntimeException("Invalid process type");
             }
 
+
+            try (Statement stmt = DB.conn.createStatement()) {
+                stmt.execute("UPDATE scenario " +
+                             "SET doing = 0 " +
+                             "WHERE id = " + id);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
             System.out.println("Donedededede");
         } catch (Exception e) {
             e.printStackTrace();

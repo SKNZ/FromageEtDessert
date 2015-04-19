@@ -125,8 +125,53 @@ SQL
     } catch (PDOException $e) {
         error(['Unknown database error']);
     }
+});
 
-    exec('java -jar mine.java > ' . $id . '.dm');
+$app->get('/scenario', function () use ($app) {
+    $db = db::conn();
+
+    try {
+        $stmt = $db->prepare(<<<'SQL'
+    SELECT *
+    FROM scenario
+SQL
+        );
+        $stmt->execute();
+        $scenarios =$stmt->fetchAll();
+        foreach ($scenarios as &$scenario) {
+            $scenario['doing'] = boolval($scenario['doing']);
+        }
+        ok(['scenarios' => $scenarios]);
+    } catch (PDOException $e) {
+        error(['Unknown database error']);
+    }
+});
+
+$app->get('/scenario/:id', function ($id) use ($app) {
+    if (!filter_var($id, FILTER_VALIDATE_INT)) {
+        error(['Invalid parameter']);
+    }
+
+    $db = db::conn();
+
+    try {
+        $stmt = $db->prepare(<<<'SQL'
+    SELECT x, y, conf, lift
+    FROM rules
+    WHERE scenario = ?
+SQL
+        );
+
+        $stmt->execute([$id]);
+        $scenarios =$stmt->fetchAll();
+        foreach ($scenarios as &$scenario) {
+            $scenario['x'] = explode(' ', $scenario['x']);
+            $scenario['y'] = explode(' ', $scenario['y']);
+        }
+        ok(['results' => $scenarios]);
+    } catch (PDOException $e) {
+        error(['Unknown database error']);
+    }
 });
 
 $app->run();

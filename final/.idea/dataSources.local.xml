@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - fromagetdessert@localhost" uuid="4c912cd1-ae70-473c-ac51-e35ff5d2fb91">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>fromagetdessert.pg_catalog fromagetdessert.public</schema-pattern>
+      <default-schemas>fromagetdessert.pg_catalog fromagetdessert.public</default-schemas>
+    </data-source>
+  </component>
+</project>

@@ -49,7 +49,12 @@ var scenarios = {
 
 $(document).ready(function(){
     var file;
+
     getScenarios();
+    setTimeout(function(){
+        getScenarios();
+    }, 5000);
+
     $('#entry').on('change', function(){
         $('#csvfile').remove();
         $('#twitterkeyword').remove();
@@ -146,6 +151,7 @@ function getScenarios(){
     /*
         AJAX Call
     */
+    $('.jumbotron table tbody').empty();
     scenarios.scenarios.forEach(function(scenar){
         $('.jumbotron table tbody').append(
             $('<tr />')
@@ -254,20 +260,9 @@ function getTwitter(){
         }
         return false;
     }
-    var minconf = $('#minconf').val();
+
+    var processForm = $('#minconfform').serialize();
+    console.log(processForm);
 
     // AJAX call
-
-    $('#sendbutton').remove();
-    $('.jumbotron').append(
-        $('<h2 />')
-            .text('Veuillez patienter pendant la capture de vos tweets'),
-        $('<img>')
-            .attr('src', 'img/loading.gif')
-            .attr('width', 100)
-            .attr('height', '100')
-    );
-    setTimeout(function(){
-        display();
-    }, 5000);
 }

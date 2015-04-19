@@ -28,8 +28,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.076923" vertical-offset="1057" max-vertical-offset="1840">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state vertical-scroll-proportion="-22.153847" vertical-offset="666" max-vertical-offset="1932">
+              <caret line="54" column="65" selection-start-line="54" selection-start-column="65" selection-end-line="54" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -38,10 +38,12 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30013105" vertical-offset="2600" max-vertical-offset="5819">
-              <caret line="148" column="23" selection-start-line="148" selection-start-column="23" selection-end-line="148" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.71875" vertical-offset="3243" max-vertical-offset="4002">
+              <caret line="263" column="26" selection-start-line="263" selection-start-column="26" selection-end-line="263" selection-end-column="26" />
               <folding>
                 <element signature="e#60#615#0" expanded="false" />
+                <element signature="n#!!block;n#display#0" expanded="false" />
+                <element signature="n#!!block;n#createCloud#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -64,8 +66,8 @@
       <list>
         <option value="$PROJECT_DIR$/css/fix.css" />
         <option value="$PROJECT_DIR$/js/tagcloud.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/app.js" />
       </list>
     </option>
@@ -273,6 +275,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#60#615#0" expanded="false" />
+            <element signature="n#!!block;n#display#0" expanded="false" />
+            <element signature="n#!!block;n#createCloud#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -291,6 +295,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#60#615#0" expanded="false" />
+            <element signature="n#!!block;n#display#0" expanded="false" />
+            <element signature="n#!!block;n#createCloud#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -305,14 +311,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.076923" vertical-offset="1057" max-vertical-offset="1840">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="571" max-vertical-offset="1449">
@@ -321,12 +319,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.153847" vertical-offset="666" max-vertical-offset="1932">
+          <caret line="54" column="65" selection-start-line="54" selection-start-column="65" selection-end-line="54" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30013105" vertical-offset="2600" max-vertical-offset="5819">
-          <caret line="148" column="23" selection-start-line="148" selection-start-column="23" selection-end-line="148" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.71875" vertical-offset="3243" max-vertical-offset="4002">
+          <caret line="263" column="26" selection-start-line="263" selection-start-column="26" selection-end-line="263" selection-end-column="26" />
           <folding>
             <element signature="e#60#615#0" expanded="false" />
+            <element signature="n#!!block;n#display#0" expanded="false" />
+            <element signature="n#!!block;n#createCloud#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -2,47 +2,50 @@
  * Created by thomasmunoz on 18/04/15.
  */
 var result = [
-    {
-        conf: 1,
-        lift: 20,
-        x: "#SW",
-        y: ["Harrison", "Ford", "Chewie"]
-    },
-    {
-        conf: 0.8,
-        lift: 22,
-        x: "#SW",
-        y: ["BB8", "R2D2", "C3PO", "Ford"]
-    },
-    {
-        conf: 0.8,
-        lift: 22,
-        x: "#SW",
-        y: ["BB8", "Luke", "Skywalker"]
-    },
-    {
-        conf: 1,
-        lift: 22,
-        x: "#SW",
-        y: ["StarWars", "Skywalker", "Ford", "BB8"]
-    }
-];
-var scenarios = [
-    {
-        id: 1,
-        entry: 'Recherche Twitter (#SW)',
-        processing: 'MinConf = 0.8',
-        state: 'Terminé',
-        doing: false
-    },
-    {
-        id: 2,
-        entry: 'Fichier CSV',
-        processing: 'MinConf = 1',
-        state: 'En cours (18%)',
-        doing: true
-    }
-];
+        {
+            conf: 1,
+            lift: 20,
+            x: ["#SW"],
+            y: ["Harrison", "Ford", "Chewie"]
+        },
+        {
+            conf: 0.8,
+            lift: 22,
+            x: ["#SW"],
+            y: ["BB8", "R2D2", "C3PO", "Ford"]
+        },
+        {
+            conf: 0.8,
+            lift: 22,
+            x: ["#SW"],
+            y: ["BB8", "Luke", "Skywalker"]
+        },
+        {
+            conf: 1,
+            lift: 22,
+            x: ["#SW"],
+            y: ["StarWars", "Skywalker", "Ford", "BB8"]
+        }
+    ];
+var scenarios = {
+    "success": true,
+    "scenarios": [
+        {
+            id: 1,
+            entry: 'Recherche Twitter (#SW)',
+            process: 'Apriori MinFreq = 0.8',
+            state: 'Terminé',
+            doing: false
+        },
+        {
+            id: 2,
+            entry: 'Fichier CSV',
+            process: 'Apriori MinFreq = 1',
+            state: 'En cours (18%)',
+            doing: true
+        }
+    ]
+};
 
 $(document).ready(function(){
     var file;
@@ -91,8 +94,12 @@ $(document).ready(function(){
     });
 
 
-    $('table a').on('click', function(){
+    $('table').on('click','a', function(e){
+        e.preventDefault();
 
+        console.log($(this).attr('href'));
+        //TODO Ajax Call
+        display();
     });
 });
 
@@ -139,14 +146,14 @@ function getScenarios(){
     /*
         AJAX Call
     */
-    scenarios.forEach(function(scenar){
+    scenarios.scenarios.forEach(function(scenar){
         $('.jumbotron table tbody').append(
             $('<tr />')
                 .append(
                 $('<td />')
                     .text(scenar.entry),
                 $('<td />')
-                    .text(scenar.processing),
+                    .text(scenar.process),
                 $('<td />')
                     .html((scenar.doing) ? scenar.state : '<a href="/scenario/' + scenar.id + '">Terminé</a>')
             )
@@ -184,15 +191,52 @@ function display(response){
        if($('#outtype').val() == 'table'){
 
        } else if($('#outtype').val() == 'tagcloud'){
+           if($('.jumbotron table').length != 0){
+               $('.jumbotron table').remove();
+           }
            console.log('coucou');
-           $('.jumbotron').append('<h2>Mot clé ' + response[0].x + '</h2>');
+           $('.jumbotron').append('<h2>Mot clé ' + response[0].x[0] + '</h2>');
            createCloud(response);
        }
     });
 }
 
 function createCloud(data){
+    data = result;
+    var wordTab = [];
+    var wordFrequency = [];
 
+    data.forEach(function(element){
+        element.y.forEach(function(word){
+            var position = wordTab.indexOf(word);
+            if(position > -1){
+                wordFrequency[position]++;
+            } else {
+                wordTab.push(word);
+                wordFrequency.push(1);
+            }
+        });
+    });
+
+    $('.jumbotron').append('<div id="cloud"></div>');
+
+    for(var i = 0; i < wordTab.length; ++i){
+        $('.jumbotron #cloud').append(
+            $('<a />')
+                .attr('href', '#')
+                .attr('rel', wordFrequency[i])
+                .text(" " + wordTab[i] + " ")
+        );
+    }
+
+    $.fn.tagcloud.defaults = {
+        size: {start: 22, end: 40, unit: 'pt'},
+        color: {start: '#cde', end: '#f52'}
+    };
+
+    $(function () {
+        $('.jumbotron #cloud a').tagcloud();
+    });
 }
 
 function getTwitter(){

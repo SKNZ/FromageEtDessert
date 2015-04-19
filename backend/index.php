@@ -69,6 +69,16 @@ $app->error(function (\Exception $e) use ($app) {
     error();
 });
 
+$app->post('/scenario/upload', function() use ($app){
+
+    if(mkdir('data/' . $_POST["id"])){
+        move_uploaded_file($_FILES['file']['tmp_name'], 'data/' . $_POST["id"] . '/input.csv');
+        echo 'success';
+    } else {
+        error(["Directory creation failed"]);
+    }
+});
+
 $app->post('/scenario/new', function () use ($app) {
     $jsonBody = json_decode($app->request->getBody());
     if (!isset($jsonBody->scenario)) {

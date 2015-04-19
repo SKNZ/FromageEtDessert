@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a836097a-a1d3-4f06-90f4-7fcd166fc997" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/js/app.js" afterPath="$PROJECT_DIR$/../frontend/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/index.html" afterPath="$PROJECT_DIR$/../frontend/index.html" />
     </list>
     <ignored path="backend.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +43,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.137045" vertical-offset="3045" max-vertical-offset="4439">
+            <state vertical-scroll-proportion="-3.6295502" vertical-offset="3505" max-vertical-offset="4439">
               <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
               <folding />
             </state>
@@ -204,7 +205,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.137045" vertical-offset="3045" max-vertical-offset="4439">
+        <state vertical-scroll-proportion="-3.6295502" vertical-offset="3505" max-vertical-offset="4439">
           <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
           <folding />
         </state>

@@ -84,9 +84,10 @@ $(document).ready(function(){
     $('table').on('click','a', function(e){
         e.preventDefault();
 
-        console.log($(this).attr('href'));
-        //TODO Ajax Call
-        display();
+        $.get('/backend/' + $(this).attr('href'), function(data){
+            console.log(data);
+            display()
+        });
     });
 });
 
@@ -143,9 +144,9 @@ function getScenarios(){
 
     $.get('/backend/scenario', function(data){
         scenarios = data;
-        $('.jumbotron table tbody').empty();
+        $('.jumbotron #scenariosTable tbody').empty();
         scenarios.scenarios.forEach(function(scenar){
-            $('.jumbotron table tbody').append(
+            $('.jumbotron #scenariosTable tbody').append(
                 $('<tr />')
                     .append(
                     $('<td />')
@@ -161,6 +162,7 @@ function getScenarios(){
 }
 
 function display(response){
+    //TODO SUPPRIMER CETTE LIGNE
     response = result;
 
     $('.jumbotron').empty();
@@ -188,15 +190,60 @@ function display(response){
 
     $('.jumbotron').on('change', '#outtype', function(){
        if($('#outtype').val() == 'table'){
+           if($('#cloud').length != 0){
+               $('.jumbotron #cloud').remove();
+               $('.jumbotron h2').remove();
+           }
+           createTab(response);
 
        } else if($('#outtype').val() == 'tagcloud'){
            if($('.jumbotron table').length != 0){
                $('.jumbotron table').remove();
            }
-           console.log('coucou');
            $('.jumbotron').append('<h2>Mot clé ' + response[0].x[0] + '</h2>');
            createCloud(response);
        }
+    });
+}
+
+function createTab(data){
+    data = result;
+
+        $('.jumbotron').append(
+            $('<table />')
+                .addClass('table table-striped')
+                .attr('id', 'resultTable')
+                .append(
+                $('<thead />')
+                    .append(
+                    $('<tr />')
+                        .append(
+                        $('<th />')
+                            .text('X'),
+                        $('<th />')
+                            .text('Y'),
+                        $('<th />')
+                            .text('Conf'),
+                        $('<th />')
+                            .text('Lift')
+                    )
+                ),
+                $('<tbody />')
+            )
+        );
+    data.forEach(function(elem){
+        $('.jumbotron #resultTable tbody').append(
+            $('<tr />').append(
+                $('<td />')
+                    .text(elem.x[0]),
+                $('<td />')
+                    .text(elem.y.join(' ')),
+                $('<td />')
+                    .text(elem.conf),
+                $('<td />')
+                    .text(elem.lift)
+            )
+        )
     });
 }
 

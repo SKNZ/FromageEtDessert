@@ -7,7 +7,7 @@ import twitter4j.Status;
  */
 public interface IExporter {
 
-    public String[] format(Status status);
+    public String[] format(Status status, String hashtag);
 
-    public void export(Status status);
+    public void export(Status status, String hashtag);
 }

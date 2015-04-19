@@ -34,10 +34,11 @@ public class TransToCSV {
                                              outputFile)))) {
 
             String nextLine;
-            Matcher p = Pattern.compile("(\\d+) (.+)").matcher("");
+            Matcher p = Pattern.compile("(\\d+) (.*)").matcher("");
             while ((nextLine = dictReader.readLine()) != null) {
                 p.reset(nextLine);
                 p.find();
+                System.out.println(nextLine);
                 items.put(Integer.parseInt(p.group(1)), p.group(2));
             }
 
@@ -47,8 +48,6 @@ public class TransToCSV {
                 p2.reset(nextLine);
                 if (p2.find()) {
                     nextLine = p2.group(1);
-                } else {
-                    System.out.println("NO MATCH FOR " + nextLine);
                 }
 
                 if (nextLine.isEmpty())

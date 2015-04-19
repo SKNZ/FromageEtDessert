@@ -27,26 +27,6 @@ var result = [
             y: ["StarWars", "Skywalker", "Ford", "BB8"]
         }
     ];
-var scenarios = {
-    "success": true,
-    "scenarios": [
-        {
-            id: 1,
-            entry: 'Recherche Twitter (#SW)',
-            process: 'Apriori MinFreq = 0.8',
-            state: 'Terminé',
-            doing: false
-        },
-        {
-            id: 2,
-            entry: 'Fichier CSV',
-            process: 'Apriori MinFreq = 1',
-            state: 'En cours (18%)',
-            doing: true
-        }
-    ]
-};
-
 $(document).ready(function(){
     var file;
 
@@ -94,7 +74,8 @@ $(document).ready(function(){
         } else if (value == 'twitter'){
             getTwitter();
         } else if(value == 'csv'){
-            upload(file);
+            var form = getForm();
+            upload(file, form);
             display();
         }
     });
@@ -109,64 +90,73 @@ $(document).ready(function(){
     });
 });
 
-function upload(file){
+function getForm(){
+    var form = {
+        "scenario" : {
+        }
+    };
+
+    var entry = $('#entry').val();
+    if(entry == 'twitter'){
+        entry = entry + " " + $('#twitterkeyword').val();
+    }
+
+    form.scenario.entry = entry;
+    form.scenario.process = "apriori " + $('#minfreq').val() + " " + $('#minconf').val() + " " + $('#minlift').val();
+
+    return form;
+}
+
+function upload(file, form){
     var formData = new FormData();
     formData.append('file', file);
-    formData.append('id', 4);
-    $.ajax({
-        url: '/backend/scenario/upload',
-        type: 'POST',
-        processData: false,
-        contentType: false,
-        data: formData,
-        xhr: function() {
-            var xhr = new window.XMLHttpRequest();
-            xhr.upload.addEventListener("progress", function(e) {
-                if (e.lengthComputable) {
-                    var percentCompleted = e.loaded / e.total;
-                    percentCompleted = (percentCompleted * 100).toFixed(2);
-                    console.log(percentCompleted);
-                }
-            }, false);
-            return xhr;
-        },
-        success: function(data){
-            console.log(data);
-            if(data !== undefined){
-                if(data.success !== undefined){
-                    if(data.success) {
-                        console.log('success');
-                        display();
-                    } else {
-                        $('.jumbotron').append(
-                            $('<div />')
-                                .addClass('alert alert-danger')
-                                .attr('role', 'alert')
-                                .text('Une erreur est survenue')
-                        );
+
+    $.post('/backend/scenario/new', JSON.stringify(form), function(data){
+       formData.append('id', data.id);
+        $.ajax({
+            url: '/backend/scenario/upload',
+            type: 'POST',
+            processData: false,
+            contentType: false,
+            data: formData,
+            success: function(data){
+                if(data !== undefined){
+                    if(data.success !== undefined){
+                        if(data.success) {
+                            $.get('/backend/scenario/' + formData.id + '/run');
+                        } else {
+                            $('.jumbotron').append(
+                                $('<div />')
+                                    .addClass('alert alert-danger')
+                                    .attr('role', 'alert')
+                                    .text('Une erreur est survenue')
+                            );
+                        }
                     }
                 }
             }
-        }
+        });
     });
 }
 function getScenarios(){
-    /*
-        AJAX Call
-    */
-    $('.jumbotron table tbody').empty();
-    scenarios.scenarios.forEach(function(scenar){
-        $('.jumbotron table tbody').append(
-            $('<tr />')
-                .append(
-                $('<td />')
-                    .text(scenar.entry),
-                $('<td />')
-                    .text(scenar.process),
-                $('<td />')
-                    .html((scenar.doing) ? scenar.state : '<a href="/scenario/' + scenar.id + '">Terminé</a>')
-            )
-        );
+    var scenarios;
+
+    $.get('/backend/scenario', function(data){
+        scenarios = data;
+        $('.jumbotron table tbody').empty();
+        scenarios.scenarios.forEach(function(scenar){
+            $('.jumbotron table tbody').append(
+                $('<tr />')
+                    .append(
+                    $('<td />')
+                        .text(scenar.entry),
+                    $('<td />')
+                        .text(scenar.process),
+                    $('<td />')
+                        .html((scenar.doing) ? scenar.state : '<a href="/scenario/' + scenar.id + '">Terminé</a>')
+                )
+            );
+        });
     });
 }
 
@@ -264,8 +254,9 @@ function getTwitter(){
         return false;
     }
 
-    var processForm = $('#minconfform').serialize();
-    console.log(processForm);
+    var form = getForm();
 
-    // AJAX call
+    $.post('/backend/scenario/new', JSON.stringify(form), function(data){
+        $.get('/backend/scenario/' + data.id + '/run');
+    })
 }

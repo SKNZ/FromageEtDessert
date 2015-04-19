@@ -5,6 +5,9 @@ import com.codahale.metrics.annotation.Timed;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Path("/scenario")
@@ -22,14 +25,22 @@ public class HelloWorldResource {
 
     public class Scenario {
         private int id;
-        private
+
+        public Scenario(int id) {
+            this.id = id;
+        }
     }
 
     @POST
     @Path("/new")
-    @Timed
-    public Saying sayHello(String body) {
-        final String value = String.format(template, name.or(defaultName));
-        return new Saying(counter.incrementAndGet(), value);
+    public Scenario sayHello() {
+        try (Statement st = DB.CONN.createStatement()) {
+            ResultSet res = st.executeQuery("INSERT INTO scenario VALUES (DEFAULT, NULL, NULL) RETURNING id");
+            return new Scenario(res.getInt(1));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }jj
+
+
     }
 }

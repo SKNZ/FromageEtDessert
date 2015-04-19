@@ -163,12 +163,12 @@ SQL
         );
 
         $stmt->execute([$id]);
-        $scenarios =$stmt->fetchAll();
-        foreach ($scenarios as &$scenario) {
-            $scenario['x'] = explode(' ', $scenario['x']);
-            $scenario['y'] = explode(' ', $scenario['y']);
+        $results =$stmt->fetchAll();
+        foreach ($results as &$result) {
+            $result['x'] = explode(' ', $result['x']);
+            $result['y'] = explode(' ', $result['y']);
         }
-        ok(['results' => $scenarios]);
+        ok(['results' => $results]);
     } catch (PDOException $e) {
         error(['Unknown database error']);
     }

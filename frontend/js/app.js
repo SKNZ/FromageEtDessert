@@ -100,7 +100,7 @@ function getForm(){
     }
 
     form.scenario.entry = entry;
-    form.scenario.process = "apriori " + $('#minfreq').val() + " " + $('#minconf').val() + " " + $('#minlift').val();
+    form.scenario.process = "apriori-nedseb-c " + $('#minfreq').val() + " " + $('#minconf').val() + " " + $('#minlift').val();
 
     return form;
 }

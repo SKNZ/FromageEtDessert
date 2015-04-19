@@ -90,15 +90,43 @@ $app->post('/scenario/new', function () use ($app) {
     try {
         $stmt = $db->prepare(<<<'SQL'
 INSERT INTO scenario
-(id, entryType, processType)
+(id, entry, process)
 VALUES (DEFAULT, ?, ?);
 SQL
-        )->execute($scenario->entry, $scenario->process);
+        )->execute([$scenario->entry, $scenario->process]);
 
         ok(['id' => $db->lastInsertId()]);
     } catch (PDOException $e) {
         error(['Unknown database error']);
     }
+});
+
+$app->get('/scenario/:id/run', function ($id) use ($app) {
+    if (!filter_var($id, FILTER_VALIDATE_INT)) {
+        error(['Invalid parameter']);
+    }
+
+    $db = db::conn();
+
+    try {
+        $stmt = $db->prepare(<<<'SQL'
+    SELECT *
+    FROM scenario
+    WHERE id = ?
+SQL
+        );
+        $stmt->execute([$id]);
+
+        $scenario = $stmt->fetch();
+
+        $entry = $scenario['entry'];
+        $process = $scenario['process'];
+        exec('java -jar mine.java ' . $id . ' ' . $entry . ' ' . $process . ' > /dev/null &');
+    } catch (PDOException $e) {
+        error(['Unknown database error']);
+    }
+
+    exec('java -jar mine.java > ' . $id . '.dm');
 });
 
 $app->run();

@@ -1,4 +1,4 @@
-package twitter;
+package hcs.fededededed.Twitter;
 
 import twitter4j.Status;
 

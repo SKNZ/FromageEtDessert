@@ -62,7 +62,6 @@ $(document).ready(function(){
 
     $('.jumbotron').on('change', '#csvfile', function(e){
         file = e.target.files[0];
-        console.log(file);
     });
 
     $('#sendbutton').on('click', function(){
@@ -76,7 +75,6 @@ $(document).ready(function(){
         } else if(value == 'csv'){
             var form = getForm();
             upload(file, form);
-            display();
         }
     });
 
@@ -85,8 +83,7 @@ $(document).ready(function(){
         e.preventDefault();
 
         $.get('/backend/' + $(this).attr('href'), function(data){
-            console.log(data);
-            display()
+            display(data)
         });
     });
 });
@@ -245,6 +242,8 @@ function createTab(data){
             )
         )
     });
+
+    $('#resultTable').dataTable();
 }
 
 function createCloud(data){

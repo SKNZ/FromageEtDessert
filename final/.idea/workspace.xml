@@ -67,16 +67,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AprioriToDatabase.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AprioriToDatabase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hcs/fededededed/AprioriToDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.23065016">
-              <caret line="31" column="66" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1429561706916" expanded="true" signature="3296:3365" placeholder="INSERT INTO ..." />
                 <marker date="1429561706916" expanded="true" signature="3507:3617" placeholder="UPDATE scena..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigurationFactory.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hcs/fededededed/Twitter/ConfigurationFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.16253869">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -582,7 +592,7 @@
       </extension>
       <option name="MAIN_CLASS_NAME" value="hcs.fededededed.Mine" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="4 twitterStream #AskMarcus 1000 apriori-nedseb-c 0.05 0.75 1" />
+      <option name="PROGRAM_PARAMETERS" value="7 twitterStream #WeKnowWhoAreHereFor1D 1000 apriori-nedseb-c 0.05 0.75 1" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -623,12 +633,12 @@
       <workItem from="1429474730427" duration="220000" />
       <workItem from="1429475002906" duration="879000" />
       <workItem from="1429477470158" duration="1648000" />
-      <workItem from="1429553032360" duration="8699000" />
+      <workItem from="1429553032360" duration="9158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27775000" />
+    <option name="totallyTimeSpent" value="28234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1916" height="1055" extended-state="0" />
@@ -1084,13 +1094,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hcs/fededededed/AprioriToDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.23065016">
-          <caret line="31" column="66" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1429561706916" expanded="true" signature="3296:3365" placeholder="INSERT INTO ..." />
             <marker date="1429561706916" expanded="true" signature="3507:3617" placeholder="UPDATE scena..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hcs/fededededed/Twitter/ConfigurationFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16253869">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -5,9 +5,9 @@ $(document).ready(function(){
     var file;
 
     getScenarios();
-    setTimeout(function(){
+    setInterval(function(){
         getScenarios();
-    }, 5000);
+    }, 1000);
 
     $('#entry').on('change', function(){
         $('#csvfile').remove();

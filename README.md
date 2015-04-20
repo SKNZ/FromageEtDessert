@@ -18,3 +18,7 @@ Il suffit de vous rendre à cette adresse http://fed.munoz.ovh et de selectionne
 L'application vous indiquera alors l'avancée de la tâche en cours et la liste des autres opérations effectuées.
 
 En cliquant sur une opération terminée, vous pourrez visualiser le résultat sous la forme d'un nuage de tag (plus le mot est retrouvé et plus il est grand) ou un tableau (où vous pourrez trier les résultats, y effectuer des recherches, etc.)
+
+## Attention
+
+Sans savoir pourquoi, il arrive que lorsque l'on capture en mode Twitter stream (live), le nombre de motifs fréquents soit très grands, entrainant un calcul des règles d'associations très long et et avec de nombreux résultats.

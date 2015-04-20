@@ -12,3 +12,9 @@ Le site utilise une base de données qui est configurée sur un de nos serveurs 
 
 Visible en ligne à l'adresse: http://fed.munoz.ovh
 
+## Comment l'utiliser ? 
+Il suffit de vous rendre à cette adresse http://fed.munoz.ovh et de selectionner vos données en entrée (recherche twitter, fichier csv, etc.), de paramétrer minconf, minfreq et le lift et de lancer le mining. 
+
+L'application vous indiquera alors l'avancée de la tâche en cours et la liste des autres opérations effectuées.
+
+En cliquant sur une opération terminée, vous pourrez visualiser le résultat sous la forme d'un nuage de tag (plus le mot est retrouvé et plus il est grand) ou un tableau (où vous pourrez trier les résultats, y effectuer des recherches, etc.)

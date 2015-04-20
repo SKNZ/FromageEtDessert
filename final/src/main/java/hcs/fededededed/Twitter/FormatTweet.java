@@ -2,6 +2,8 @@ package hcs.fededededed.Twitter;
 
 import twitter4j.Status;
 
+import java.text.Normalizer;
+
 /**
  * Created by m13003158 on 02/04/15.
  */
@@ -100,6 +102,11 @@ public class FormatTweet {
         for (String s : FormatTweet.getUselessChar()) {
             currentTweet = currentTweet.replace(s, "");
         }
+
+        // Normalize tweets
+        currentTweet = Normalizer
+                        .normalize(currentTweet, Normalizer.Form.NFD)
+                        .replaceAll("[^\\x00-\\x7F]", "");
 
         // "Wed Apr 01 03:30:08 CEST 2015"
         // java.util.Date.getDay/getHour is deprecated so ...

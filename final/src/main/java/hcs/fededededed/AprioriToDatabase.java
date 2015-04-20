@@ -95,9 +95,13 @@ public class AprioriToDatabase {
                 "SET state = CONCAT('Rules... ', ?, '%') " +
                 "WHERE id = ?");
 
-        int latestPercent = 1;
+        int latestPercent = 0;
         for (int i = 1; i < frequentPatterns.size(); ++i) {
             int percent = (int)((double)i * 100 / frequentPatterns.size());
+
+            if (latestPercent == 0)
+                latestPercent = percent;
+
             if (percent % 3 == 0 && percent == latestPercent) {
                 try {
                     latestPercent = percent;

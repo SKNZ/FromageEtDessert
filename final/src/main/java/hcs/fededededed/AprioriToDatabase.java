@@ -89,10 +89,27 @@ public class AprioriToDatabase {
                         "INSERT INTO rules (scenario, x, y, conf, lift) VALUES (?, ?, ?, ?, ?)");
 
         double total = frequentPatterns.get(0).count;
+
+        PreparedStatement statusStmt = DB.conn.prepareStatement(
+                "UPDATE scenario " +
+                "SET state = CONCAT('Rules... ', ?, '%') " +
+                "WHERE id = ?");
+
+        int latestPercent = 0;
         for (int i = 1; i < frequentPatterns.size(); ++i) {
-            if (i % 1000 == 0) {
-                System.out.println(i + " / " + frequentPatterns.size());
+            int percent = (int)((double)i * 100 / frequentPatterns.size());
+            if (percent % 3 == 0 && percent == latestPercent) {
+                try {
+                    latestPercent = percent;
+                    statusStmt.setInt(1, percent);
+                    statusStmt.setInt(2, id);
+                    statusStmt.executeUpdate();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                System.out.print(percent + "%...");
             }
+
             FrequentPattern y = frequentPatterns.get(i);
             List<Integer> yItems = y.items;
             double yFq = (double) y.count / total;

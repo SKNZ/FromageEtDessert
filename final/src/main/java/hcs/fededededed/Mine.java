@@ -1,6 +1,6 @@
 package hcs.fededededed;
 
-import hcs.fededededed.Twitter.TwitStream;
+import hcs.fededededed.Twitter.Twitter;
 
 import java.io.File;
 import java.sql.PreparedStatement;
@@ -13,8 +13,8 @@ import java.sql.Statement;
  */
 public class Mine {
     public static void main(String[] args) {
+        final int id = Integer.parseInt(args[0]);
         try {
-            final int id = Integer.parseInt(args[0]);
             final String basePath = "./";
             final String basePathId = basePath + id;
 
@@ -48,19 +48,47 @@ public class Mine {
                             "SET state = CONCAT('Twittering... ', ?, '%') " +
                             "WHERE id = ?");
 
-                    entryCount = TwitStream.capture(args[argsPos++],
-                                       Integer.parseInt(args[argsPos++]),
-                                       basePathId + "/input.csv",
-                                       percent -> {
-                                           try {
-                                               stmt.setInt(1, percent);
-                                               stmt.setInt(2, id);
-                                               stmt.executeUpdate();
-                                           } catch (SQLException e) {
-                                               e.printStackTrace();
-                                           }
-                                           System.out.print(percent + "%...");
-                                       });
+                    entryCount = Twitter.capture(args[argsPos++],
+                                                 Integer.parseInt(args[argsPos++]),
+                                                 basePathId + "/input.csv",
+                                                 percent -> {
+                                                     try {
+                                                         stmt.setInt(1,
+                                                                     percent);
+                                                         stmt.setInt(2, id);
+                                                         stmt.executeUpdate();
+                                                     } catch (SQLException e) {
+                                                         e.printStackTrace();
+                                                     }
+                                                     System.out.print(percent +
+                                                                      "%...");
+                                                 });
+                    break;
+                case "twitterStream":
+                    System.out.println("Twittering...");
+                    PreparedStatement stmt2 = DB.conn.prepareStatement(
+                            "UPDATE scenario " +
+                            "SET state = CONCAT('Twittering... ', ?, '%') " +
+                            "WHERE id = ?");
+
+                    entryCount = Twitter.captureStream(args[argsPos++],
+                                                       Integer.parseInt(args[argsPos++]),
+                                                       basePathId +
+                                                       "/input.csv",
+                                                       percent -> {
+                                                           try {
+                                                               stmt2.setInt(1,
+                                                                           percent);
+                                                               stmt2.setInt(2,
+                                                                           id);
+                                                               stmt2.executeUpdate();
+                                                           } catch (SQLException e) {
+                                                               e.printStackTrace();
+                                                           }
+                                                           System.out.print(
+                                                                   percent +
+                                                                   "%...");
+                                                       });
                     break;
                 case "csv":
                     break;
@@ -113,6 +141,7 @@ public class Mine {
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
+
                     System.out.println("Associations rules...");
                     AprioriToDatabase.convert(id, basePathId + "/apriori.out",
                                               basePathId + "/input.trans.dict",
@@ -134,6 +163,14 @@ public class Mine {
             System.out.println("Donedededede");
         } catch (Exception e) {
             e.printStackTrace();
+
+            try (Statement stmt = DB.conn.createStatement()) {
+                stmt.execute("UPDATE scenario " +
+                             "SET state = 'An unknown error happened' " +
+                             "WHERE id = " + id);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
         }
     }
 }

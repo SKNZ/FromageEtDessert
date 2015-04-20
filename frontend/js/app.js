@@ -1,32 +1,6 @@
 /**
  * Created by thomasmunoz on 18/04/15.
  */
-var result = [
-        {
-            conf: 1,
-            lift: 20,
-            x: ["#SW"],
-            y: ["Harrison", "Ford", "Chewie"]
-        },
-        {
-            conf: 0.8,
-            lift: 22,
-            x: ["#SW"],
-            y: ["BB8", "R2D2", "C3PO", "Ford"]
-        },
-        {
-            conf: 0.8,
-            lift: 22,
-            x: ["#SW"],
-            y: ["BB8", "Luke", "Skywalker"]
-        },
-        {
-            conf: 1,
-            lift: 22,
-            x: ["#SW"],
-            y: ["StarWars", "Skywalker", "Ford", "BB8"]
-        }
-    ];
 $(document).ready(function(){
     var file;
 
@@ -159,9 +133,6 @@ function getScenarios(){
 }
 
 function display(response){
-    //TODO SUPPRIMER CETTE LIGNE
-    response = result;
-
     $('.jumbotron').empty();
     $('.jumbotron').append(
         $('<h1 />')

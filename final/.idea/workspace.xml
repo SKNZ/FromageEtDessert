@@ -50,31 +50,32 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/hcs/fededededed/Mine.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="150" column="6" selection-start-line="150" selection-start-column="6" selection-end-line="150" selection-end-column="6" />
+              <caret line="89" column="75" selection-start-line="78" selection-start-column="59" selection-end-line="89" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1429558828691" expanded="true" signature="610:651" placeholder="SELECT COUNT..scenario..." />
-                <marker date="1429558828691" expanded="true" signature="839:880" placeholder="UPDATE scena..." />
-                <marker date="1429558828691" expanded="true" signature="1494:1633" placeholder="UPDATE scena..." />
-                <marker date="1429558828691" expanded="true" signature="2940:3079" placeholder="UPDATE scena..." />
-                <marker date="1429558828691" expanded="true" signature="5788:5924" placeholder="UPDATE scena..." />
-                <marker date="1429558828691" expanded="true" signature="6347:6481" placeholder="UPDATE scena..." />
-                <marker date="1429558828691" expanded="true" signature="7172:7281" placeholder="UPDATE scena..." />
-                <marker date="1429558828691" expanded="true" signature="7587:7722" placeholder="UPDATE scena..." />
-                <marker date="1429558828691" expanded="true" signature="7689:7722" placeholder="UPDATE scena..." />
+                <marker date="1429559684980" expanded="true" signature="610:651" placeholder="SELECT COUNT..scenario..." />
+                <marker date="1429559684980" expanded="true" signature="839:880" placeholder="UPDATE scena..." />
+                <marker date="1429559684980" expanded="true" signature="1494:1633" placeholder="UPDATE scena..." />
+                <marker date="1429559684980" expanded="true" signature="2940:3079" placeholder="UPDATE scena..." />
+                <marker date="1429559684980" expanded="true" signature="5788:5924" placeholder="UPDATE scena..." />
+                <marker date="1429559684980" expanded="true" signature="6347:6481" placeholder="UPDATE scena..." />
+                <marker date="1429559684980" expanded="true" signature="7173:7282" placeholder="UPDATE scena..." />
+                <marker date="1429559684980" expanded="true" signature="7588:7723" placeholder="UPDATE scena..." />
+                <marker date="1429559684980" expanded="true" signature="7690:7723" placeholder="UPDATE scena..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AprioriToDatabase.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AprioriToDatabase.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hcs/fededededed/AprioriToDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="69" selection-start-line="50" selection-start-column="69" selection-end-line="50" selection-end-column="69" />
+            <state vertical-scroll-proportion="0.58204335">
+              <caret line="109" column="43" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1429550762452" expanded="true" signature="3296:3365" placeholder="INSERT INTO ..." />
+                <marker date="1429560256557" expanded="true" signature="3296:3365" placeholder="INSERT INTO ..." />
+                <marker date="1429560256557" expanded="true" signature="3507:3617" placeholder="UPDATE scena..." />
               </folding>
             </state>
           </provider>
@@ -105,10 +106,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormatTweet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FormatTweet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hcs/fededededed/Twitter/FormatTweet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65170276">
+            <state vertical-scroll-proportion="0.0">
               <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -149,14 +150,14 @@
         <option value="$PROJECT_DIR$/src/main/java/Mine.java" />
         <option value="$PROJECT_DIR$/src/main/java/hcs/fededededed/Twitter/ConfigurationFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/hcs/fededededed/Twitter/TwitToCSV.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hcs/fededededed/AprioriToDatabase.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/hcs/fededededed/DB.java" />
         <option value="$PROJECT_DIR$/src/main/java/hcs/fededededed/CSVToTrans.java" />
         <option value="$PROJECT_DIR$/src/main/java/hcs/fededededed/Twitter/TwitStream.java" />
         <option value="$PROJECT_DIR$/src/main/java/hcs/fededededed/Twitter/Twitter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hcs/fededededed/Mine.java" />
         <option value="$PROJECT_DIR$/src/main/java/hcs/fededededed/Twitter/FormatTweet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hcs/fededededed/Mine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hcs/fededededed/AprioriToDatabase.java" />
       </list>
     </option>
   </component>
@@ -622,12 +623,12 @@
       <workItem from="1429474730427" duration="220000" />
       <workItem from="1429475002906" duration="879000" />
       <workItem from="1429477470158" duration="1648000" />
-      <workItem from="1429553032360" duration="5747000" />
+      <workItem from="1429553032360" duration="6702000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24823000" />
+    <option name="totallyTimeSpent" value="25778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1916" height="1055" extended-state="0" />
@@ -702,15 +703,15 @@
           <caret line="121" column="24" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1429558828691" expanded="true" signature="610:651" placeholder="SELECT COUNT..scenario..." />
-            <marker date="1429558828691" expanded="true" signature="839:880" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="1494:1633" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="2940:3079" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="5788:5924" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="6347:6481" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="7172:7281" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="7587:7722" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="7689:7722" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="610:651" placeholder="SELECT COUNT..scenario..." />
+            <marker date="1429559684980" expanded="true" signature="839:880" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="1494:1633" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="2940:3079" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="5788:5924" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="6347:6481" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="7173:7282" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="7588:7723" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="7690:7723" placeholder="UPDATE scena..." />
           </folding>
         </state>
       </provider>
@@ -721,7 +722,8 @@
           <caret line="50" column="69" selection-start-line="50" selection-start-column="69" selection-end-line="50" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1429550762452" expanded="true" signature="3296:3365" placeholder="INSERT INTO ..." />
+            <marker date="1429560256557" expanded="true" signature="3296:3365" placeholder="INSERT INTO ..." />
+            <marker date="1429560256557" expanded="true" signature="3507:3617" placeholder="UPDATE scena..." />
           </folding>
         </state>
       </provider>
@@ -781,15 +783,15 @@
           <caret line="92" column="35" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1429558828691" expanded="true" signature="610:651" placeholder="SELECT COUNT..scenario..." />
-            <marker date="1429558828691" expanded="true" signature="839:880" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="1494:1633" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="2940:3079" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="5788:5924" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="6347:6481" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="7172:7281" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="7587:7722" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="7689:7722" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="610:651" placeholder="SELECT COUNT..scenario..." />
+            <marker date="1429559684980" expanded="true" signature="839:880" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="1494:1633" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="2940:3079" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="5788:5924" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="6347:6481" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="7173:7282" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="7588:7723" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="7690:7723" placeholder="UPDATE scena..." />
           </folding>
         </state>
       </provider>
@@ -800,7 +802,8 @@
           <caret line="135" column="51" selection-start-line="135" selection-start-column="51" selection-end-line="135" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1429550762452" expanded="true" signature="3296:3365" placeholder="INSERT INTO ..." />
+            <marker date="1429560256557" expanded="true" signature="3296:3365" placeholder="INSERT INTO ..." />
+            <marker date="1429560256557" expanded="true" signature="3507:3617" placeholder="UPDATE scena..." />
           </folding>
         </state>
       </provider>
@@ -860,15 +863,15 @@
           <caret line="92" column="35" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1429558828691" expanded="true" signature="610:651" placeholder="SELECT COUNT..scenario..." />
-            <marker date="1429558828691" expanded="true" signature="839:880" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="1494:1633" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="2940:3079" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="5788:5924" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="6347:6481" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="7172:7281" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="7587:7722" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="7689:7722" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="610:651" placeholder="SELECT COUNT..scenario..." />
+            <marker date="1429559684980" expanded="true" signature="839:880" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="1494:1633" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="2940:3079" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="5788:5924" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="6347:6481" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="7173:7282" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="7588:7723" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="7690:7723" placeholder="UPDATE scena..." />
           </folding>
         </state>
       </provider>
@@ -879,7 +882,8 @@
           <caret line="135" column="51" selection-start-line="135" selection-start-column="51" selection-end-line="135" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1429550762452" expanded="true" signature="3296:3365" placeholder="INSERT INTO ..." />
+            <marker date="1429560256557" expanded="true" signature="3296:3365" placeholder="INSERT INTO ..." />
+            <marker date="1429560256557" expanded="true" signature="3507:3617" placeholder="UPDATE scena..." />
           </folding>
         </state>
       </provider>
@@ -939,15 +943,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1429558828691" expanded="true" signature="610:651" placeholder="SELECT COUNT..scenario..." />
-            <marker date="1429558828691" expanded="true" signature="839:880" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="1494:1633" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="2940:3079" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="5788:5924" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="6347:6481" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="7172:7281" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="7587:7722" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="7689:7722" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="610:651" placeholder="SELECT COUNT..scenario..." />
+            <marker date="1429559684980" expanded="true" signature="839:880" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="1494:1633" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="2940:3079" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="5788:5924" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="6347:6481" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="7173:7282" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="7588:7723" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="7690:7723" placeholder="UPDATE scena..." />
           </folding>
         </state>
       </provider>
@@ -958,7 +962,8 @@
           <caret line="135" column="51" selection-start-line="135" selection-start-column="51" selection-end-line="135" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1429550762452" expanded="true" signature="3296:3365" placeholder="INSERT INTO ..." />
+            <marker date="1429560256557" expanded="true" signature="3296:3365" placeholder="INSERT INTO ..." />
+            <marker date="1429560256557" expanded="true" signature="3507:3617" placeholder="UPDATE scena..." />
           </folding>
         </state>
       </provider>
@@ -1038,13 +1043,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hcs/fededededed/AprioriToDatabase.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hcs/fededededed/Twitter/FormatTweet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="69" selection-start-line="50" selection-start-column="69" selection-end-line="50" selection-end-column="69" />
+          <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1429550762452" expanded="true" signature="3296:3365" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -1062,28 +1066,30 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/hcs/fededededed/Mine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="150" column="6" selection-start-line="150" selection-start-column="6" selection-end-line="150" selection-end-column="6" />
+          <caret line="89" column="75" selection-start-line="78" selection-start-column="59" selection-end-line="89" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1429558828691" expanded="true" signature="610:651" placeholder="SELECT COUNT..scenario..." />
-            <marker date="1429558828691" expanded="true" signature="839:880" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="1494:1633" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="2940:3079" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="5788:5924" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="6347:6481" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="7172:7281" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="7587:7722" placeholder="UPDATE scena..." />
-            <marker date="1429558828691" expanded="true" signature="7689:7722" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="610:651" placeholder="SELECT COUNT..scenario..." />
+            <marker date="1429559684980" expanded="true" signature="839:880" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="1494:1633" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="2940:3079" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="5788:5924" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="6347:6481" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="7173:7282" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="7588:7723" placeholder="UPDATE scena..." />
+            <marker date="1429559684980" expanded="true" signature="7690:7723" placeholder="UPDATE scena..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hcs/fededededed/Twitter/FormatTweet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hcs/fededededed/AprioriToDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65170276">
-          <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.58204335">
+          <caret line="109" column="43" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1429560256557" expanded="true" signature="3296:3365" placeholder="INSERT INTO ..." />
+            <marker date="1429560256557" expanded="true" signature="3507:3617" placeholder="UPDATE scena..." />
           </folding>
         </state>
       </provider>

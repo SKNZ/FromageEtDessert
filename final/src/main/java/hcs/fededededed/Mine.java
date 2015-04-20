@@ -141,6 +141,7 @@ public class Mine {
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
+
                     System.out.println("Associations rules...");
                     AprioriToDatabase.convert(id, basePathId + "/apriori.out",
                                               basePathId + "/input.trans.dict",

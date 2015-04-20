@@ -22,7 +22,7 @@ $(document).ready(function(){
                         .attr('id', 'csvfile')
                 );
             }
-        } else if ($(this).val() == 'twitter' || $(this).val() == 'twitterstream'){
+        } else if ($(this).val() == 'twitter' || $(this).val() == 'twitterStream'){
             if($('#twitterkeyword').length == 0 && $('#twitternumber').length == 0){
                 $('#entryform').append(
                     $('<input>')
@@ -50,8 +50,8 @@ $(document).ready(function(){
 
         if(value == 'blackbox'){
             location.href = 'http://unicorn.ovh';
-        } else if (value == 'twitter' || value == 'twitterstream'){
-            getTwitter((value == 'twitterstream'));
+        } else if (value == 'twitter' || value == 'twitterStream'){
+            getTwitter((value == 'twitterStream'));
         } else if(value == 'csv'){
             var form = getForm();
             upload(file, form);
@@ -76,7 +76,7 @@ function getForm(){
 
     var entry = $('#entry').val();
 
-    if(entry == 'twitter' || entry == 'twitterstream'){
+    if(entry == 'twitter' || entry == 'twitterStream'){
         entry = entry + " " + $('#twitterkeyword').val() + ' ' + (($('#twitternumber').val() === undefined) ? '1000' : $('#twitternumber').val());
     }
 

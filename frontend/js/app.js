@@ -59,7 +59,7 @@ $(document).ready(function(){
     });
 
 
-    $('table').on('click','a', function(e){
+    $('table').on('click','a.link', function(e){
         e.preventDefault();
 
         $.get('/backend/' + $(this).attr('href'), function(data){
@@ -132,7 +132,8 @@ function getScenarios(){
                     $('<td />')
                         .text(scenar.process),
                     $('<td />')
-                        .html((scenar.doing) ? scenar.state : '<a href="/scenario/' + scenar.id + '">Terminé</a>')
+                        .html((scenar.doing) ? scenar.state : '<a href="/scenario/' + scenar.id + '" class="link">Terminé</a> ' +
+                        '<a href=/backend/' + scenar.id + '/input.csv>Télécharger csv</a>')
                 )
             );
         });
@@ -141,6 +142,7 @@ function getScenarios(){
 
 function display(response){
     $('.jumbotron').empty();
+
     $('.jumbotron').append(
         $('<h1 />')
             .text("Rendu"),

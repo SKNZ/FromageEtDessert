@@ -96,7 +96,7 @@ function getForm(){
 
     var entry = $('#entry').val();
     if(entry == 'twitter'){
-        entry = entry + " " + $('#twitterkeyword').val();
+        entry = entry + " " + $('#twitterkeyword').val() + " 1000";
     }
 
     form.scenario.entry = entry;

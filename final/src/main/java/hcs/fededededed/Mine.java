@@ -14,7 +14,6 @@ import java.sql.Statement;
 public class Mine {
     public static void main(String[] args) {
         try {
-            final int wantedTweets = 1000;
             final int id = Integer.parseInt(args[0]);
             final String basePath = "./";
             final String basePathId = basePath + id;
@@ -40,6 +39,7 @@ public class Mine {
             }
 
             int argsPos = 2;
+            int entryCount = 0;
             switch (args[1]) {
                 case "twitter":
                     System.out.println("Twittering...");
@@ -48,8 +48,8 @@ public class Mine {
                             "SET state = CONCAT('Twittering... ', ?, '%') " +
                             "WHERE id = ?");
 
-                    TwitStream.capture(args[argsPos++],
-                                       wantedTweets,
+                    entryCount = TwitStream.capture(args[argsPos++],
+                                       Integer.parseInt(args[argsPos++]),
                                        basePathId + "/input.csv",
                                        percent -> {
                                            try {
@@ -79,7 +79,7 @@ public class Mine {
                 case "apriori-nedseb-c":
                     System.out.println("Apriori...");
                     Integer fq = (int)
-                            (Double.parseDouble(args[argsPos++]) * wantedTweets);
+                            (Double.parseDouble(args[argsPos++]) * entryCount);
 
                     ProcessBuilder aprioriBuilder =
                             new ProcessBuilder(basePath + "/apriori",

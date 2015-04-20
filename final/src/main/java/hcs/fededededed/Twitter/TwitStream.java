@@ -9,9 +9,9 @@ import java.util.function.Consumer;
  * Created by m13003158 on 02/04/15.
  */
 public class TwitStream {
-    public static void capture(String hashtag, final int wantedTweets,
-                               String fileName,
-                               Consumer<Integer> progressCallback)
+    public static int capture(String hashtag, final int wantedTweets,
+                              String fileName,
+                              Consumer<Integer> progressCallback)
             throws IOException, TwitterException {
         final TwitToCSV twitToCSV = new TwitToCSV(fileName);
         Twitter
@@ -37,5 +37,7 @@ public class TwitStream {
             progressCallback.accept((int) (tweetCount * 100/ wantedTweets));
             query.setMaxId(lastId - 1);
         }
+
+        return wantedTweets;
     }
 }

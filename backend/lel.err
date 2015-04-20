@@ -1,0 +1,2 @@
+java.lang.RuntimeException: Invalid process type
+	at hcs.fededededed.Mine.main(Mine.java:123)

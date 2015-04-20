@@ -12,6 +12,7 @@ $(document).ready(function(){
     $('#entry').on('change', function(){
         $('#csvfile').remove();
         $('#twitterkeyword').remove();
+        $('#twitternumber').remove();
 
         if($(this).val() == 'csv'){
             if($('#csvfile').length == 0){
@@ -21,14 +22,19 @@ $(document).ready(function(){
                         .attr('id', 'csvfile')
                 );
             }
-        } else if ($(this).val() == 'twitter'){
-            if($('#twitterkeyword').length == 0){
+        } else if ($(this).val() == 'twitter' || $(this).val() == 'twitterstream'){
+            if($('#twitterkeyword').length == 0 && $('#twitternumber').length == 0){
                 $('#entryform').append(
                     $('<input>')
                         .attr('type', 'text')
                         .attr('placeholder', 'Élement de recherche')
                         .attr('name', 'twitterkeyword')
-                        .attr('id', 'twitterkeyword')
+                        .attr('id', 'twitterkeyword'),
+                    $('<input>')
+                        .attr('type', 'number')
+                        .attr('placeholder', "Nombre de tweets")
+                        .attr('name', 'twitternumber')
+                        .attr('id', 'twitternumber')
                 );
             }
         }
@@ -44,8 +50,8 @@ $(document).ready(function(){
 
         if(value == 'blackbox'){
             location.href = 'http://unicorn.ovh';
-        } else if (value == 'twitter'){
-            getTwitter();
+        } else if (value == 'twitter' || value == 'twitterstream'){
+            getTwitter((value == 'twitterstream'));
         } else if(value == 'csv'){
             var form = getForm();
             upload(file, form);
@@ -69,8 +75,9 @@ function getForm(){
     };
 
     var entry = $('#entry').val();
-    if(entry == 'twitter'){
-        entry = entry + " " + $('#twitterkeyword').val() + " 1000";
+
+    if(entry == 'twitter' || entry == 'twitterstream'){
+        entry = entry + " " + $('#twitterkeyword').val() + ' ' + (($('#twitternumber').val() === undefined) ? '1000' : $('#twitternumber').val());
     }
 
     form.scenario.entry = entry;
@@ -168,16 +175,18 @@ function display(response){
            if($('.jumbotron table').length != 0){
                $('.jumbotron table').remove();
            }
-           $('.jumbotron').append('<h2>Mot clé ' + response[0].x[0] + '</h2>');
-           createCloud(response);
+           //$('.jumbotron').append('<h2>Mot clé ' + response.results[0].x[0] + '</h2>');
+           createCloud(response.results);
        }
     });
 }
 
 function createTab(data){
-    data = result;
-
+    data = data.results;
         $('.jumbotron').append(
+            $('<b />')
+                .text('Cliquez sur l\'intitulé de la colonne pour la trier'),
+            $('<br>'),
             $('<table />')
                 .addClass('table table-striped')
                 .attr('id', 'resultTable')
@@ -218,7 +227,6 @@ function createTab(data){
 }
 
 function createCloud(data){
-    data = result;
     var wordTab = [];
     var wordFrequency = [];
 
@@ -247,7 +255,7 @@ function createCloud(data){
 
     $.fn.tagcloud.defaults = {
         size: {start: 22, end: 40, unit: 'pt'},
-        color: {start: '#cde', end: '#f52'}
+        color: {start: '#0080FF', end: '#FF0000'}
     };
 
     $(function () {
@@ -255,7 +263,7 @@ function createCloud(data){
     });
 }
 
-function getTwitter(){
+function getTwitter(stream){
     var keyword = $('.jumbotron #twitterkeyword').val();
 
     if(keyword == undefined || keyword.length <= 1){

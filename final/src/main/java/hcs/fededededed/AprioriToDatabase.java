@@ -99,7 +99,7 @@ public class AprioriToDatabase {
         for (int i = 1; i < frequentPatterns.size(); ++i) {
             int percent = (int)((double)i * 100 / frequentPatterns.size());
 
-            if (percent % 3 == 0 && percent != latestPercent) {
+            if (percent != latestPercent) {
                 try {
                     latestPercent = percent;
                     statusStmt.setInt(1, percent);

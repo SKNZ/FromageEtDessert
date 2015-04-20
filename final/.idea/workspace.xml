@@ -49,16 +49,17 @@
       <file leaf-file-name="Mine.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hcs/fededededed/Mine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3235294">
-              <caret line="120" column="26" selection-start-line="120" selection-start-column="26" selection-end-line="120" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.6749226">
+              <caret line="73" column="63" selection-start-line="73" selection-start-column="63" selection-end-line="73" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1429553680860" expanded="true" signature="617:658" placeholder="SELECT COUNT..scenario..." />
-                <marker date="1429553680860" expanded="true" signature="846:887" placeholder="UPDATE scena..." />
-                <marker date="1429553680860" expanded="true" signature="1501:1640" placeholder="UPDATE scena..." />
-                <marker date="1429553680860" expanded="true" signature="3811:3947" placeholder="UPDATE scena..." />
-                <marker date="1429553680860" expanded="true" signature="4370:4504" placeholder="UPDATE scena..." />
-                <marker date="1429553680860" expanded="true" signature="5195:5304" placeholder="UPDATE scena..." />
+                <marker date="1429556768112" expanded="true" signature="617:658" placeholder="SELECT COUNT..scenario..." />
+                <marker date="1429556768112" expanded="true" signature="846:887" placeholder="UPDATE scena..." />
+                <marker date="1429556768112" expanded="true" signature="1501:1640" placeholder="UPDATE scena..." />
+                <marker date="1429556768112" expanded="true" signature="2690:2829" placeholder="UPDATE scena..." />
+                <marker date="1429556768112" expanded="true" signature="5156:5292" placeholder="UPDATE scena..." />
+                <marker date="1429556768112" expanded="true" signature="5715:5849" placeholder="UPDATE scena..." />
+                <marker date="1429556768112" expanded="true" signature="6540:6649" placeholder="UPDATE scena..." />
               </folding>
             </state>
           </provider>
@@ -115,7 +116,7 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1429550762452" expanded="true" signature="33:114" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -613,12 +614,12 @@
       <workItem from="1429474730427" duration="220000" />
       <workItem from="1429475002906" duration="879000" />
       <workItem from="1429477470158" duration="1648000" />
-      <workItem from="1429553032360" duration="1815000" />
+      <workItem from="1429553032360" duration="3354000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20891000" />
+    <option name="totallyTimeSpent" value="22430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1916" height="1055" extended-state="0" />
@@ -693,12 +694,13 @@
           <caret line="121" column="24" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1429553680860" expanded="true" signature="617:658" placeholder="SELECT COUNT..scenario..." />
-            <marker date="1429553680860" expanded="true" signature="846:887" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="1501:1640" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="3811:3947" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="4370:4504" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="5195:5304" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="617:658" placeholder="SELECT COUNT..scenario..." />
+            <marker date="1429556768112" expanded="true" signature="846:887" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="1501:1640" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="2690:2829" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="5156:5292" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="5715:5849" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="6540:6649" placeholder="UPDATE scena..." />
           </folding>
         </state>
       </provider>
@@ -745,7 +747,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1429550762452" expanded="true" signature="33:114" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -764,12 +766,13 @@
           <caret line="92" column="35" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1429553680860" expanded="true" signature="617:658" placeholder="SELECT COUNT..scenario..." />
-            <marker date="1429553680860" expanded="true" signature="846:887" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="1501:1640" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="3811:3947" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="4370:4504" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="5195:5304" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="617:658" placeholder="SELECT COUNT..scenario..." />
+            <marker date="1429556768112" expanded="true" signature="846:887" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="1501:1640" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="2690:2829" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="5156:5292" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="5715:5849" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="6540:6649" placeholder="UPDATE scena..." />
           </folding>
         </state>
       </provider>
@@ -816,7 +819,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1429550762452" expanded="true" signature="33:114" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -835,12 +838,13 @@
           <caret line="92" column="35" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1429553680860" expanded="true" signature="617:658" placeholder="SELECT COUNT..scenario..." />
-            <marker date="1429553680860" expanded="true" signature="846:887" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="1501:1640" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="3811:3947" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="4370:4504" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="5195:5304" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="617:658" placeholder="SELECT COUNT..scenario..." />
+            <marker date="1429556768112" expanded="true" signature="846:887" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="1501:1640" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="2690:2829" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="5156:5292" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="5715:5849" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="6540:6649" placeholder="UPDATE scena..." />
           </folding>
         </state>
       </provider>
@@ -887,7 +891,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1429550762452" expanded="true" signature="33:114" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -906,12 +910,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1429553680860" expanded="true" signature="617:658" placeholder="SELECT COUNT..scenario..." />
-            <marker date="1429553680860" expanded="true" signature="846:887" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="1501:1640" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="3811:3947" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="4370:4504" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="5195:5304" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="617:658" placeholder="SELECT COUNT..scenario..." />
+            <marker date="1429556768112" expanded="true" signature="846:887" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="1501:1640" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="2690:2829" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="5156:5292" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="5715:5849" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="6540:6649" placeholder="UPDATE scena..." />
           </folding>
         </state>
       </provider>
@@ -950,7 +955,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1429550762452" expanded="true" signature="33:114" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -975,7 +980,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1429550762452" expanded="true" signature="33:114" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1027,16 +1032,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hcs/fededededed/Mine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3235294">
-          <caret line="120" column="26" selection-start-line="120" selection-start-column="26" selection-end-line="120" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.6749226">
+          <caret line="73" column="63" selection-start-line="73" selection-start-column="63" selection-end-line="73" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1429553680860" expanded="true" signature="617:658" placeholder="SELECT COUNT..scenario..." />
-            <marker date="1429553680860" expanded="true" signature="846:887" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="1501:1640" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="3811:3947" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="4370:4504" placeholder="UPDATE scena..." />
-            <marker date="1429553680860" expanded="true" signature="5195:5304" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="617:658" placeholder="SELECT COUNT..scenario..." />
+            <marker date="1429556768112" expanded="true" signature="846:887" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="1501:1640" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="2690:2829" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="5156:5292" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="5715:5849" placeholder="UPDATE scena..." />
+            <marker date="1429556768112" expanded="true" signature="6540:6649" placeholder="UPDATE scena..." />
           </folding>
         </state>
       </provider>

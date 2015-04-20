@@ -62,6 +62,27 @@ public class Mine {
                                            System.out.print(percent + "%...");
                                        });
                     break;
+                case "twitterStream":
+                    System.out.println("Twittering...");
+                    PreparedStatement stmt = DB.conn.prepareStatement(
+                            "UPDATE scenario " +
+                            "SET state = CONCAT('Twittering... ', ?, '%') " +
+                            "WHERE id = ?");
+
+                    entryCount = TwitStream.capture(args[argsPos++],
+                                                    Integer.parseInt(args[argsPos++]),
+                                                    basePathId + "/input.csv",
+                                                    percent -> {
+                                                        try {
+                                                            stmt.setInt(1, percent);
+                                                            stmt.setInt(2, id);
+                                                            stmt.executeUpdate();
+                                                        } catch (SQLException e) {
+                                                            e.printStackTrace();
+                                                        }
+                                                        System.out.print(percent + "%...");
+                                                    });
+                    break;
                 case "csv":
                     break;
                 default:

@@ -133,7 +133,7 @@ function getScenarios(){
                         .text(scenar.process),
                     $('<td />')
                         .html((scenar.doing) ? scenar.state : '<a href="/scenario/' + scenar.id + '" class="link">Terminé</a> ' +
-                        '<a href=/backend/' + scenar.id + '/input.csv>Télécharger csv</a>')
+                        '<a href=/backend/' + scenar.id + '/input.csv>Télécharger csv entrée</a>')
                 )
             );
         });
